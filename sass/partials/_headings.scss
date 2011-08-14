@@ -1,0 +1,42 @@
+
+#{headings(6)} {
+	font-family : $serif-font;
+	font-weight : bold;
+}
+
+h1 { 
+	@include adjust-font-size-to(48px, 2);
+	@include trailer(0.5,$base-line-height);
+}
+
+section > h1 {
+}
+
+h2 {
+	$h2-size: 20px;
+	@include adjust-font-size-to($h2-size, 1);
+	@include trailer(1,$h2-size);
+}
+
+h3, 
+section h1,
+aside h1 { 
+	@include adjust-font-size-to(24px, 1);
+	@include trailer(1, 24px);
+}
+
+h4 { 
+	@include adjust-font-size-to(20px);
+	@include trailer(1,$base-line-height);
+}
+
+h5 { 
+	@include adjust-font-size-to($base-font-size);
+	@include trailer(1);
+}
+
+h6 { 
+	@include adjust-font-size-to($base-font-size);
+}
+
+

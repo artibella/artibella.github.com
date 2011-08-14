@@ -36,7 +36,8 @@
   {% capture rss_url %}{% if site.subscribe_rss contains ':' %}{{ site.subscribe_rss }}{% else %}{{ root_url }}{{ site.subscribe_rss }}{% endif %}{% endcapture %}
   <link href="{{ rss_url }}" rel="alternate" title="{{site.title}}" type="application/atom+xml"/>
 
-  <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+ 	<!-- <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">-->
+	<link href="{{ root_url }}/stylesheets/style.css" rel="stylesheet" type="text/css">
 
 	<script src="{{ root_url }}/javascripts/libs/modernizr.custom.70204.js"></script>
 

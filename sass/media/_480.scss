@@ -1,0 +1,51 @@
+/* ROOT */
+
+$total-cols : 5;
+$col-width : 5em;
+$gutter-width : 1em;
+$side-gutter-width : 1em;
+
+#container {
+	@include container;
+	@include susy-grid-background;
+}
+
+
+/* HEADINGS */
+/* TYPOGRAPHY */
+/* LINKS */
+/* FIGURES & IMAGES */
+/* TABLES */
+/* FORMS */
+/* BANNER */
+
+header[role="banner"] {
+	div {
+		@include full();
+	}
+}
+
+/* NAVIGATION */
+/* CONTENT */
+.content {
+	@include full;
+	@include clearfix();
+}
+
+
+/* MAIN */
+div[role="main"] {
+
+}
+
+/* COMPLIMENTARY */
+aside[role="complementary"] {
+}
+/* CONTENTINFO */
+footer[role="contentinfo"] {
+}
+
+#footercontent {
+	@include full();
+}
+/* GLOBAL OBJECTS */

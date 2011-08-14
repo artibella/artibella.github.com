@@ -1,0 +1,63 @@
+$total-cols : 8;
+$col-width : 5em;
+$gutter-width : 1em;
+$side-gutter-width : 1em;
+
+/* ROOT */
+#container {
+	@include container;
+	@include susy-grid-background;
+}
+   
+/* HEADINGS */
+   
+   
+/* TYPOGRAPHY */
+/* LINKS */
+/* FIGURES & IMAGES */
+/* TABLES */
+/* FORMS */
+/* BANNER */
+header[role="banner"] {
+	div {
+		@include full();
+	}
+}
+
+/* NAVIGATION */
+nav {
+	
+	margin: 0 0 20px 0;
+	ul {
+
+		@include horizontal-list(0);
+		@include full();		
+		li {
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+}
+/* CONTENT */
+.content {
+	@include columns(8);
+	@include alpha();
+	@include omega();
+	clear: none;
+	margin-left: 0;
+}
+/* 11.MAIN */
+div[role="main"] {
+
+}
+/* 11.MAIN */
+/* 12.COMPLIMENTARY */
+aside[role="complementary"] {
+	@include full();
+}
+/* 13.CONTENTINFO */
+/* 14.GLOBAL OBJECTS */
+/* 15.VENDOR-SPECIFIC */
+/* 16.TEMPLATE SPECIFICS */
+/* 17.MODERNIZR */

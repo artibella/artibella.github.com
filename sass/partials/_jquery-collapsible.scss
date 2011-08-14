@@ -1,0 +1,81 @@
+.ui-collapsible-contain {
+}
+
+.ui-collapsible-heading {
+	position: relative;
+	cursor: pointer;
+	font-family: $sans-font;
+		
+	@include adjust-font-size-to($base-font-size);
+	font-weight: normal;
+	margin: 0;
+	
+	@include no-select();
+
+	.ui-button-inner {
+		display: inline-block;
+		margin: 0 1.4em 0 0.5em;
+	}
+
+	.ui-icon {
+		@include rotate(0);
+		@include transition-property(all);
+		@include transition-duration(0.5s);
+	}
+
+	&.ui-collapsible-heading-expanded {		
+		.ui-icon {
+			@include rotate(-45deg);
+		}
+	}
+	
+	&:focus, &:active {
+		outline: none;
+	}
+}
+
+
+.ui-collapsible-heading-toggle {
+	display: block;
+	@include background-image(linear-gradient(#ffffff, $border-color));	
+	@include padding-leader(0.5);
+	@include padding-trailer(0.5);
+	
+}
+
+.ui-collapsible-content {
+	@include padding-leader();
+	padding-left: 8px;
+	padding-right: 8px;
+	
+	
+}
+
+@import "icon/*.png";
+
+.ui-icon {
+	height: $base-font-size;
+	width: $base-font-size;
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.ui-btn-icon-right {
+	.ui-icon {
+		right: 8px;
+	}	
+}
+
+.ui-btn-icon-left {
+	.ui-iocn {
+		left: 8px;
+	}
+	.ui-collapsible-heading-toggle {
+		
+	}
+}
+
+.ui-icon-plus {
+	@include icon-sprite(plus);
+}
