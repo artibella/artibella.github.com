@@ -33,7 +33,7 @@ body {
 	margin : 0 auto;
 	padding : 0;
 	color : $font-color;
-	background: $body-bg-color;
+	background: $main-bg;
 }
 
 
@@ -44,7 +44,7 @@ body {
 	@if $show-grid-backgrounds {
 		@include susy-grid-background;
 	} @else {
-		background: $container-bg-color;
+		background: $page-bg;
 	}	
 }
 
@@ -53,11 +53,6 @@ body {
 /*	background: #F9F9F9 url(../img/page_bg.png) repeat-x;
 */}
 
-/* HEADINGS */
-@import "partials/headings";
-
-/* TYPOGRAPHY */
-@import "partials/typography";
 
 /* FIGURES & MEDIA */
 
@@ -76,11 +71,9 @@ body {
 header[role=banner] {
 	@include padding-leader(1);
 	@include padding-trailer(1);
-	color: $header-text-color;
-	background: $header-bg-color;
+	background: $header-bg;
 	
 	a {
-		color: $header-text-color;;
 	}
 	div {
 		@include full();
@@ -119,7 +112,7 @@ nav {
 		a:hover {
 			@include box-shadow(10px);
 			text-decoration: none;
-			background: $link-hover-color;
+			background: $link-color-hover;
 			color: #ffffff;
 		}
 	}
@@ -160,11 +153,11 @@ aside[role="complementary"] {
 
 /* CONTENTINFO */
 footer[role="contentinfo"] {
-	color: $footer-text-color;
-	background: $footer-bg-color;
+	color: $footer-color;
+	background: $footer-bg;
 	
 	a {
-		color: $footer-text-color;		
+		color: $footer-link-color;		
 	}
 	
 	p {

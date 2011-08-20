@@ -10,7 +10,7 @@
 $sans-font: "Nobile", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;
 $serif-font: "Droid Serif", "Georgia", "Times New Roman", "Palatino", "Hoefler Text", "Baskerville", serif;
 $monospace-font: "Droid Sans Mono", Menlo, Courier New, Courier, Mono, monospace;
-$mono = $mono-space-font;
+$mono: $monospace-font;
 
 $base-font-family: $sans-font;  // default font-family
 $base-font-size: 16px;
@@ -20,31 +20,7 @@ $show-column-grid-backgrounds: true;
 $show-baseline-grid-backgrounds: true;
 $show-grid-backgrounds: false;
 
-$body-bg-color: #EFEFEF;
-$container-bg-color: #FFFFFF;
-
-$font-color: #696969;
-$link-color: #FF9900;
-
-$link-hover-color: darken($link-color, 15%);
-$link-active-color: $link-hover-color;
-$link-visited-color: $link-hover-color;
-
-$selected-font-color: #001624;  // color for selected text
-$selected-background-color: #B7D7FF;  // bg-color for selected text
-
-$border-color: #E9E9E9;
-$default-rhythm-border-style: solid;
-
-$header-bg-color: #FF9900;
-$header-text-color: #FFFFFF;
-$footer-bg-color: $header-bg-color;
-$footer-text-color: $header-text-color;
 
 
-$list-left-margin: 1em;  // left margin for ul an ol
 
-$default-box-shadow-color: darken($border-color, 10%);
-$default-box-shadow-blur: 10px;
-$default-box-shadow-spread: false;
 

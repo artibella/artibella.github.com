@@ -1,25 +1,35 @@
 $noise-bg: image-url('noise.png') top left;
 $img-border: inline-image('dotted-border.png');
 
-// Main Link Colors
-$link-color: lighten(#165b94, 3) !default;
-$link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
-$link-color-visited: adjust-color($link-color, $hue: 80, $lightness: -4) !default;
-$link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
-
 // Main Section Colors
-$main-bg: #f8f8f8 !default;
+$main-bg: #EFEFEF !default;
 $page-bg: #252525 !default;
 $article-border: #eeeeee !default;
 
+
+$font-color: #696969 !default;
+
+// Main Link Colors
+$link-color: lighten(#165b94, 3) !default;
+$link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 25) !default;
+$link-color-visited: adjust-color($link-color, $lightness: -4) !default;
+$link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
+
+
+$selected-font-color: #001624;  // color for selected text
+$selected-background-color: #B7D7FF;  // bg-color for selected text
+
+$border-color: #E9E9E9;
+$default-rhythm-border-style: solid;
+
+/* Header */
 $header-bg: #333 !default;
 $header-border: lighten($header-bg, 15) !default;
 $title-color: #f2f2f2 !default;
 $subtitle-color: #aaa !default;
 
-$text-color: #222 !default;
-$text-color-light: #aaa !default;
-$type-border: #ddd !default;
+
+
 
 /* Navigation */
 $nav-bg: #ccc !default;
@@ -31,6 +41,19 @@ $nav-border-top: lighten($nav-bg, 15) !default;
 $nav-border-bottom: darken($nav-bg, 25) !default;
 $nav-border-left: darken($nav-bg, 11) !default;
 $nav-border-right: lighten($nav-bg, 7) !default;
+
+/* Box Shadows */
+$default-box-shadow-color: darken($border-color, 10%);
+$default-box-shadow-blur: 10px;
+$default-box-shadow-spread: false;
+
+
+
+$text-color: #222 !default;
+$text-color-light: #aaa !default;
+$type-border: #ddd !default;
+
+
 
 /* Sidebar colors */
 $sidebar-bg: #f2f2f2 !default;
@@ -60,11 +83,13 @@ $page-border-bottom: darken($footer-bg, 5) !default;
 a {
   @include link-colors($link-color, $hover: $link-color-hover, $focus: $link-color-hover, $visited: $link-color-visited, $active: $link-color-active);
 }
+
 aside[role=sidebar] a {
   @include link-colors($sidebar-link-color, $hover: $sidebar-link-color-hover, $focus: $sidebar-link-color-hover, $active: $sidebar-link-color-active);
 }
+
 a {
-  @include transition(color .3s);
+  @include transition(color .25s);
 }
 
 html {

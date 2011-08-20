@@ -1,4 +1,6 @@
 $blockquote: $type-border !default;
+$list-left-margin: 1em !default;  // left margin for ul an ol
+
 
 // Fonts
 .sans {
@@ -18,24 +20,22 @@ body {
 
 @include establish-baseline();
 
+/* HEADINGS */
+@import "partials/headings";
 
-a, 
-a:visited {
+
+a {
 	outline : none;
-	color : $link-color;
 	text-decoration : none;
 }
  
 a:hover { 
 	outline : none;
-	color : $link-hover-color; 
 	text-decoration : none; 
 }
  
-a:active, 
 a:focus { 
 	outline : none;
-	color : $link-active-color; 
 }
 
 p, 
@@ -214,6 +214,7 @@ big { font-size: 1.2em; }
   font-size: 1.4em;
   line-height: 1.45em;
 }
+
 /* @extend this to force long lines of continuous text to wrap */
 .force-wrap {
   white-space: -moz-pre-wrap;
