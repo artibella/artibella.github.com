@@ -1,6 +1,16 @@
-@import "partials/base";
+@import "compass";
+@import "susy";
 
-@import "partials/reset";
+
+@include global-reset;
+@include reset-html5;
+
+@import "custom/colors";
+@import "custom/layout";
+@import "base";
+@import "partials";
+@import "custom/styles";
+
 
 /* ROOT */
 /* 
@@ -22,12 +32,10 @@ html {
 body { 
 	margin : 0 auto;
 	padding : 0;
-	font-family: $base-font-family;
 	color : $font-color;
 	background: $body-bg-color;
 }
 
-@include establish-baseline();
 
 #container {
 	@include container();
@@ -48,7 +56,7 @@ body {
 /* HEADINGS */
 @import "partials/headings";
 
-/*.TYPOGRAPHY */
+/* TYPOGRAPHY */
 @import "partials/typography";
 
 /* FIGURES & MEDIA */
@@ -64,7 +72,6 @@ body {
 @import "partials/forms";
 
 /* BANNER */
-
 
 header[role=banner] {
 	@include padding-leader(1);
@@ -144,38 +151,12 @@ div[role="main"] {
 	@include text-shadow();
 }
 
-
 /* COMPLIMENTARY */
 
 aside[role="complementary"] {
 }
 
-@import "social/*.png";
-@include all-social-sprites;
-
-
-.social {
-	list-style: none;
-	margin-left: 0;
-	@include inline-block-list(10px);
-	
-	li {
-		@include trailer(0.5, $base-font-size);
-		
-	}	
-
-	a {
-		padding-left: 38px;
-		@include adjust-font-size-to(14px,1);
-		@include padding-leader(0.25, $base-line-height);
-		@include padding-trailer(0.25, $base-line-height);
-		height: $base-line-height;
-		display: block;
-		vertical-align: center;
-		
-	}
-}
-
+@import "partials/sidebar/social";
 
 /* CONTENTINFO */
 footer[role="contentinfo"] {
@@ -205,47 +186,19 @@ footer[role="contentinfo"] {
 @import "partials/jquery-collapsible";
 
 
-
 /* MEDIA QUERIES */
 
 /*Print __________________________________________________________________________________________________________ */
-@media print {
-	
-	@import "media/print";
-
-}/*/mediaquery*/
+@import "media/print";
 
 /*480px __________________________________________________________________________________________________________ */
-@media only screen and (min-width: 480px) {
-
-	@import "media/480";
-
-}/*/mediaquery*/
+@import "media/480";
 
 /*768px __________________________________________________________________________________________________________ */
-@media only screen and (min-width: 768px) {
-
-	@import "media/768";
-
-}/*/mediaquery*/
+@import "media/768";
 
 /*992px __________________________________________________________________________________________________________ */
-@media only screen and (min-width: 992px) {
-
-	@import "media/992";
-
-}/*/mediaquery*/
+@import "media/992";
 
 /*1382px __________________________________________________________________________________________________________ */
-@media only screen and (min-width: 1382px) {
-
-	@import "media/1382";
-
-}/*/mediaquery*/
-
-/*2x __________________________________________________________________________________________________________ */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
-
-
-
-}/*/mediaquery*/
+@import "media/1382";

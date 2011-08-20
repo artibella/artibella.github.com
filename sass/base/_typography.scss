@@ -1,94 +1,191 @@
 $blockquote: $type-border !default;
-$mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 
 // Fonts
-.heading {
-  font-family: "PT Serif", "Georgia", "Helvetica Neue", Arial, sans-serif;
+.sans {
+	font-family: $sans-font;
 }
-.sans { font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif; }
-.serif { font-family: "PT Serif", Georgia, Times, "Times New Roman", serif; }
-.mono { font-family: $mono; }
-
-body > header h1 {
-  font-size: 2.2em;
-  @extend .heading;
-  font-weight: normal;
-  line-height: 1.2em;
-  margin-bottom: 0.6667em;
+.serif {
+	font-family: $serif-font;
 }
 
-body {
-  line-height: 1.5em;
-  color: $text-color;
-  @extend .serif;
-}
-h1 {
-  font-size: 2.2em;
-  line-height: 1.2em;
+.mono {
+	font-family: $monospace-font;
 }
 
-@media only screen and (min-width: 992px) {
-  body { font-size: 1.15em; }
-  h1 { font-size: 2.6em; line-height: 1.2em; }
+body { 
+	font-family: $base-font-family;
 }
 
-#{headings()}{
-  @extend .heading;
-  text-rendering: optimizelegibility;
-  margin-bottom: 1em;
-  font-weight: bold;
-}
-h2, section h1 {
-  font-size: 1.5em;
-}
-h3, section h2, section section h1 {
-  font-size: 1.3em;
-}
-h4, section h3, section section h2, section section section h1 {
-  font-size: 1em;
-}
-h5, section h4, section section h3 {
-  font-size: .9em;
-}
-h6, section h5, section section h4, section section section h3 {
-  font-size: .8em;
-}
-p, blockquote, ul, ol { margin-bottom: 1.5em; }
+@include establish-baseline();
 
-ul { list-style-type: disc;
-  ul { list-style-type: circle;
-    ul { list-style-type: square; }}}
 
-ol { list-style-type: decimal;
-  ol { list-style-type: lower-alpha;
-    ol { list-style-type: lower-roman; }}}
+a, 
+a:visited {
+	outline : none;
+	color : $link-color;
+	text-decoration : none;
+}
+ 
+a:hover { 
+	outline : none;
+	color : $link-hover-color; 
+	text-decoration : none; 
+}
+ 
+a:active, 
+a:focus { 
+	outline : none;
+	color : $link-active-color; 
+}
 
-ul, ol { &, ul, ol { margin-left: 1.3em; }}
+p, 
+ol, 
+ul, 
+dl,
+address { 
+	@include trailer(1);
+}
 
-strong { font-weight: bold; }
+ul, 
+ol { 
+	margin-left : $list-left-margin; 
+	@include trailer(1);
+}
 
-em { font-style: italic; }
+ul { 
+	list-style-type : disc;
 
-sup, sub { font-size: 0.8em; position: relative;  display: inline-block; }
-sup { top: -.5em; }
-sub { bottom: -.5em; }
+	ul {
+		list-style-type: circle;
+  
+		ul {
+			list-style-type: square;
+		}
+	}
+
+}
+
+
+ol { 
+	list-style-type : decimal;
+	ol {
+		list-style-type: lower-alpha;
+    	ol {
+			list-style-type: lower-roman;
+		}
+	}	
+}
+
+li ul, 
+li ol { 
+	margin : 0;
+}
+
+dl, dd { 
+	@include trailer(1);
+}
+
+dt { 
+	font-weight : bold;
+}
+
+blockquote  { 
+	margin-left : $list-left-margin; 
+	padding-left: 0;
+	@include trailer(1);
+	border-left : 1px solid rgb(200,200,200);
+	font-style : italic;
+}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {
+	content : '';
+	content : none;
+}
+
+blockquote {
+	$bq-margin: 1.2em;
+	font-style: italic;
+	position: relative;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	padding-left: 1em;
+	border-left: 4px solid rgba($text-color-light, .5);
+	cite {
+    	font-style: italic;
+    	a {
+			color: $text-color-light !important; 
+			word-wrap: break-word;
+		}
+    	&:before {
+			content: '\2014';
+			padding: {right: .3em; left: .3em;}
+			color: $text-color-light;
+		}
+	}
+	
+	@media only screen and (min-width: 992px) {
+    	padding-left: 1.5em;
+		border-left-width: 4px;
+	}
+}
+
+
+b, strong	{ 
+	font-weight : bold;
+}
+
+i, em { 
+	font-style : italic;
+}
+
+sup, sub {
+	font-size: 0.8em;
+	position: relative;
+	display: inline-block;
+	line-height: 0;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.5em;
+}
 
 q { font-style: italic;
   &:before { content: "\201C"; }
   &:after { content: "\201D"; }
 }
 
-em, dfn { font-style: italic; }
+address { 
+	font-style : normal;
+}
 
-strong, dfn { font-weight: bold; }
+del, s {
+	text-decoration: line-through;
+}
 
-del, s { text-decoration: line-through; }
+abbr, acronym {
+	border-bottom: 1px dotted; cursor: help;
+}
 
-abbr, acronym { border-bottom: 1px dotted; cursor: help; }
 
-pre, code, tt { @extend .mono-font; }
+pre { 
+	@include trailer(1);
+	white-space : pre; 
+	white-space : pre-wrap; 
+	word-wrap : break-word;
+}
 
-sub, sup { line-height: 0; }
+pre, code { 
+	font-family: $monospace-font;
+	@include adjust-font-size-to($base-font-size);
+}
+
 
 hr { margin-bottom: 0.2em; }
 
@@ -96,24 +193,7 @@ small { font-size: .8em; }
 
 big { font-size: 1.2em; }
 
-blockquote {
-  $bq-margin: 1.2em;
-  font-style: italic;
-  position: relative;
-  font-size: 1.2em;
-  line-height: 1.5em;
-  padding-left: 1em;
-  border-left: 4px solid rgba($text-color-light, .5);
-  cite {
-    font-style: italic;
-    a { color: $text-color-light !important; word-wrap: break-word; }
-    &:before { content: '\2014'; padding:{right: .3em; left: .3em;} color: $text-color-light; }
-  }
-  @media only screen and (min-width: 992px) {
-    padding-left: 1.5em;
-    border-left-width: 4px;
-  }
-}
+
 
 .has-pullquote:before {
   /* Reset metrics. */

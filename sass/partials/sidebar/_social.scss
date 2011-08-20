@@ -1,0 +1,23 @@
+@import "social/*.png";
+@include all-social-sprites;
+
+
+.social {
+	list-style: none;
+	margin-left: 0;
+	@include inline-block-list(10px);
+	
+	li {
+		@include trailer(0.5, $base-font-size);
+	}	
+
+	a {
+		padding-left: 38px;
+		@include adjust-font-size-to(14px,1);
+		@include padding-leader(0.25, $base-line-height);
+		@include padding-trailer(0.25, $base-line-height);
+		height: $base-line-height;
+		display: block;
+		vertical-align: center;	
+	}
+}

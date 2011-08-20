@@ -1,21 +1,45 @@
 /*
-Syntax error: File to import not found or unreadable: partials/base.
-              Load paths:
-                /Users/berserka/-- PROJECTS --/artibella.github.com/sass
-                /Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.5/frameworks/blueprint/stylesheets
-                /Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.5/frameworks/compass/stylesheets
-                Compass::SpriteImporter
-        on line 1 of /Users/berserka/-- PROJECTS --/artibella.github.com/sass/style.scss
-
-1: /Users/berserka/-- PROJECTS --/artibella.github.com/sass/style.scss
+Syntax error: Invalid CSS after "...ocial-clean-up,": expected function argument, was ");"
+        on line 18 of social
+        from line 152 of /Users/berserka/-- PROJECTS --/artibella.github.com/sass/style.scss
 
 Backtrace:
-/Users/berserka/-- PROJECTS --/artibella.github.com/sass/style.scss:1
-/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/import_node.rb:64:in `rescue in import'
-/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/import_node.rb:42:in `import'
-/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/import_node.rb:25:in `imported_file'
-/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:148:in `rescue in visit_import'
-/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:153:in `visit_import'
+social:18
+/Users/berserka/-- PROJECTS --/artibella.github.com/sass/style.scss:152
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/scss/parser.rb:898:in `expected'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/lexer.rb:193:in `expected!'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:443:in `assert_expr'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:354:in `arglist'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:333:in `fn_arglist'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:442:in `assert_expr'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:354:in `arglist'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:333:in `fn_arglist'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:299:in `funcall'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:287:in `ident'
+(eval):2:in `unary_not'
+(eval):2:in `unary_div'
+(eval):2:in `unary_minus'
+(eval):2:in `unary_plus'
+(eval):3:in `times_div_or_mod'
+(eval):3:in `plus_or_minus'
+(eval):3:in `relational'
+(eval):3:in `eq_or_neq'
+(eval):3:in `and_expr'
+(eval):3:in `or_expr'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:266:in `space'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:251:in `interpolation'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:217:in `expr'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:442:in `assert_expr'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/script/parser.rb:49:in `parse'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/scss/parser.rb:788:in `sass_script'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/scss/parser.rb:336:in `variable'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/scss/parser.rb:379:in `block_child'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/scss/parser.rb:372:in `block_contents'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/scss/parser.rb:57:in `stylesheet'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/scss/parser.rb:26:in `parse'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/engine.rb:319:in `_to_tree'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/engine.rb:250:in `to_tree'
+/Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:144:in `visit_import'
 /Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/visitors/base.rb:37:in `visit'
 /Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/visitors/perform.rb:18:in `visit'
 /Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/sass-3.1.5/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
@@ -57,4 +81,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: partials/base.\A               Load paths:\A                 /Users/berserka/-- PROJECTS --/artibella.github.com/sass\A                 /Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.5/frameworks/blueprint/stylesheets\A                 /Users/berserka/.rvm/gems/ruby-1.9.2-p136/gems/compass-0.11.5/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 1 of /Users/berserka/-- PROJECTS --/artibella.github.com/sass/style.scss\A \A 1: /Users/berserka/-- PROJECTS --/artibella.github.com/sass/style.scss"; }
+  content: "Syntax error: Invalid CSS after \"...ocial-clean-up,\": expected function argument, was \");\"\A         on line 18 of social\A         from line 152 of /Users/berserka/-- PROJECTS --/artibella.github.com/sass/style.scss"; }

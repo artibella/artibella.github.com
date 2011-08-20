@@ -1,7 +1,11 @@
+.heading {
+  font-family: $serif-font;
+}
 
-#{headings(6)} {
+#{headings()} {
 	font-family : $serif-font;
 	font-weight : bold;
+	text-rendering: optimizelegibility;
 }
 
 h1 { 
@@ -12,31 +16,37 @@ h1 {
 section > h1 {
 }
 
-h2 {
+h2, section h1, aside h1 {
 	$h2-size: 20px;
 	@include adjust-font-size-to($h2-size, 1);
 	@include trailer(1,$h2-size);
 }
 
-h3, 
-section h1,
-aside h1 { 
+h3,
+section h2, 
+section section h1 { 
 	@include adjust-font-size-to(24px, 1);
 	@include trailer(1, 24px);
 }
 
-h4 { 
+h4,
+section h3, 
+section section h2, 
+section section section h1 { 
 	@include adjust-font-size-to(20px);
 	@include trailer(1,$base-line-height);
 }
 
-h5 { 
+h5, 
+section h4, 
+section section h3 { 
 	@include adjust-font-size-to($base-font-size);
 	@include trailer(1);
 }
 
-h6 { 
+h6,
+section h5, 
+section section h4, 
+section section section h3 { 
 	@include adjust-font-size-to($base-font-size);
 }
-
-

@@ -1,51 +1,54 @@
-/* ROOT */
+@media only screen and (min-width: 480px) {
+	/* ROOT */
 
-$total-cols : 5;
-$col-width : 5em;
-$gutter-width : 1em;
-$side-gutter-width : 1em;
+	$total-cols : 5;
+	$col-width : 5em;
+	$gutter-width : 1em;
+	$side-gutter-width : 1em;
 
-#container {
-	@include container;
-	@include susy-grid-background;
-}
+	#container {
+		@include container;
+		@include susy-grid-background;
+	}
 
 
-/* HEADINGS */
-/* TYPOGRAPHY */
-/* LINKS */
-/* FIGURES & IMAGES */
-/* TABLES */
-/* FORMS */
-/* BANNER */
+	/* HEADINGS */
+	/* TYPOGRAPHY */
+	/* LINKS */
+	/* FIGURES & IMAGES */
+	/* TABLES */
+	/* FORMS */
+	/* BANNER */
 
-header[role="banner"] {
-	div {
+	header[role="banner"] {
+		div {
+			@include full();
+		}
+	}
+
+	/* NAVIGATION */
+	/* CONTENT */
+	.content {
+		@include full;
+		@include clearfix();
+	}
+
+
+	/* MAIN */
+	div[role="main"] {
+
+	}
+
+	/* COMPLIMENTARY */
+	aside[role="complementary"] {
+	}
+	
+	/* CONTENTINFO */
+	footer[role="contentinfo"] {
+	}
+
+	#footercontent {
 		@include full();
 	}
-}
 
-/* NAVIGATION */
-/* CONTENT */
-.content {
-	@include full;
-	@include clearfix();
-}
-
-
-/* MAIN */
-div[role="main"] {
-
-}
-
-/* COMPLIMENTARY */
-aside[role="complementary"] {
-}
-/* CONTENTINFO */
-footer[role="contentinfo"] {
-}
-
-#footercontent {
-	@include full();
-}
-/* GLOBAL OBJECTS */
+}/*/mediaquery*/
