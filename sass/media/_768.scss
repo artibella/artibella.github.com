@@ -7,8 +7,6 @@
 
 	/* ROOT */
 	#container {
-		@include container;
-		@include susy-grid-background;
 	}
    
 	/* HEADINGS */
@@ -21,9 +19,13 @@
 	/* FORMS */
 	/* BANNER */
 	header[role="banner"] {
-		div {
-			@include full();
+		> div {
+			@include container();
 		}
+	}
+
+	#header-content {
+		@include full();
 	}
 
 	/* NAVIGATION */
@@ -43,22 +45,34 @@
 	}
 	/* CONTENT */
 	.content {
-		@include columns(8);
-		@include alpha();
-		@include omega();
-		clear: none;
-		margin-left: 0;
+		@include container;
+		@include susy-grid-background;		
 	}
+	
 	/* 11.MAIN */
 	div[role="main"] {
+		@include full();
 
 	}
 	/* MAIN */
 	/* COMPLIMENTARY */
 	aside[role="complementary"] {
+			@include full();
+	}
+	
+	.social {
+		li {
+			width: 33,3333333333%;
+		}	
+	}	
+	/* CONTENTINFO */
+	#footer-container {
+		@include container();	
+	}
+
+	#footer-content {
 		@include full();
 	}
-	/* CONTENTINFO */
 
 
 }/*/mediaquery*/

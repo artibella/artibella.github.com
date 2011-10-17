@@ -7,8 +7,6 @@
 	$side-gutter-width : 1em;
 
 	#container {
-		@include container;
-		@include susy-grid-background;
 	}
 
 
@@ -21,33 +19,51 @@
 	/* BANNER */
 
 	header[role="banner"] {
-		div {
-			@include full();
+		> div {
+			@include container();
 		}
 	}
+	
+	#header-content {
+		@include full();
+	}	
 
 	/* NAVIGATION */
 	/* CONTENT */
 	.content {
-		@include full;
-		@include clearfix();
+		@include container();
+		@include susy-grid-background;
+		
 	}
 
 
 	/* MAIN */
 	div[role="main"] {
-
+		@include full();
 	}
 
 	/* COMPLIMENTARY */
 	aside[role="complementary"] {
-	}
+		@include full();
+	}	
+	.social {
+		@include inline-block-list(0);
+
+		li {
+			@include trailer(0.5, $base-font-size);
+			width: 49%;
+		}	
+	}	
 	
 	/* CONTENTINFO */
 	footer[role="contentinfo"] {
 	}
 
-	#footercontent {
+	#footer-container {
+		@include container();	
+	}
+
+	#footer-content {
 		@include full();
 	}
 

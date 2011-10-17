@@ -8,6 +8,7 @@ function getNav(){
     if (event.target.value) window.location.href = event.target.value;
   });
 }
+
 function addSidebarToggler() {
   $('#content').append('<span class="toggle-sidebar"></span>');
   $('.toggle-sidebar').bind('click', function(e){
@@ -29,21 +30,6 @@ function addSidebarToggler() {
     });
   }
   if(sections.length >= 3){ $('aside[role=sidebar]').addClass('thirds') }
-}
-function testFeatures() {
-  var features = ['maskImage'];
-  $(features).map(function(feature){
-    if (Modernizr.testAllProps(feature)) {
-      $('html').addClass(feature);
-    } else {
-      $('html').addClass('no-'+feature);
-    }
-  });
-  if ("placeholder" in document.createElement("input")) {
-    $('html').addClass('placeholder');
-  } else {
-    $('html').addClass('no-placeholder');
-  }
 }
 
 function addCodeLineNumbers(){
@@ -98,6 +84,7 @@ function wrapFlashVideos(){
   });
 }
 
+
 $.domReady(function(){
   testFeatures();
   wrapFlashVideos();
@@ -107,26 +94,7 @@ $.domReady(function(){
   addSidebarToggler();
 });
 
-// iOS scaling bug fix
-// Rewritten version
-// By @mathias, @cheeaun and @jdalton
-// Source url: https://gist.github.com/901295
-(function(doc) {
-  var addEvent = 'addEventListener',
-  type = 'gesturestart',
-  qsa = 'querySelectorAll',
-  scales = [1, 1],
-  meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
-  function fix() {
-    meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
-    doc.removeEventListener(type, fix, true);
-  }
-  if ((meta = meta[meta.length - 1]) && addEvent in doc) {
-    fix();
-    scales = [.25, 1.6];
-    doc[addEvent](type, fix, true);
-  }
-}(document));
+
 
 /*!	SWFObject v2.2 modified by Brandon Mathis to contain only what is necessary to dynamically embed flash objects
   * Uncompressed source in javascripts/libs/swfobject-dynamic.js

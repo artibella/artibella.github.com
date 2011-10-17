@@ -27,3 +27,28 @@
   @return $text-color;
 }
 
+
+
+@mixin apply-side-shadow-border($side, $size: 1px, $shadow-size: 1px, $color: $border-color, $shadow-color: $shadow-border-color, $lines: 1, $font-size: $base-font-size) {
+
+    @include apply-side-rhythm-border($side, $size, $lines, $font-size);
+    border-width: $size; /* reset to pixel due to Webkit not rendering small em based borders */
+    @if $side == bottom {
+	    @include box-shadow($shadow-color 0 $shadow-size);
+        border-bottom-color: $color;
+    } @else if $side == top {
+        @include box-shadow($color 0 -#{$shadow-size});
+        border-color: $shadow-color;
+    } @else {
+        @include box-shadow($shadow-color $shadow-size 0);
+    }
+
+}
+
+@mixin top-shadow-border($size: 1px, $shadow-size: 1px, $color: $border-color, $shadow-color: $shadow-border-color, $lines: 1, $font-size: $base-font-size) {
+    @include apply-side-shadow-border(top, $size, $shadow-size, $color, $shadow-color, $lines, $font-size);
+}
+
+@mixin bottom-shadow-border($size: 1px, $shadow-size: 1px, $color: $border-color, $shadow-color: $shadow-border-color, $lines: 1, $font-size: $base-font-size) {
+    @include apply-side-shadow-border(bottom, $size, $shadow-size, $color, $shadow-color, $lines, $font-size);
+}

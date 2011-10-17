@@ -1,5 +1,3 @@
-/*global jQuery, $ */
-
 (function ($) {
 	$.fn.collapsible = function (customOptions) {     
         var options = {

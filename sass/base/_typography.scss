@@ -1,3 +1,12 @@
+$sans-font: "Nobile", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;
+$serif-font: "Droid Serif", "Georgia", "Times New Roman", "Palatino", "Hoefler Text", "Baskerville", serif;
+$monospace-font: "Droid Sans Mono", Menlo, Courier New, Courier, Mono, monospace;
+$mono: $monospace-font;
+
+$base-font-family: $sans-font;  // default font-family
+$base-font-size: 16px;
+$base-line-height: 24px;
+
 $blockquote: $type-border !default;
 $list-left-margin: 1em !default;  // left margin for ul an ol
 

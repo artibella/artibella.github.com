@@ -1,14 +1,12 @@
 @media only screen and (min-width: 992px) {
 
 	/* ROOT */
-	$total-cols : 10;
-	$col-width : 5em;
-	$gutter-width : 1em;
-	$side-gutter-width : 2em;
+	$total-cols : 16;
+	$col-width : 3em;
+	$gutter-width : 0.75em;
+	$side-gutter-width: 1.5em;
 
 	#container {
-		@include container;
-		@include susy-grid-background;
 	}
 	/* HEADINGS */
 	/* TYPOGRAPHY */
@@ -18,46 +16,64 @@
 	/* FORMS */
 	/* BANNER */
 	header[role="banner"] {
-		div {
-			@include full();
+		> div {			
+			@include container();
 		}
 	}
+
+	#header-content {
+		@include full();
+	}	
+
 	/* NAVIGATION */
    
 	/* CONTENT */
 	.content {
-		@include columns(10);
-		clear: none;
-		@include omega();
-		margin-left: 0;
+		@include container();
+		@include susy-grid-background;
+
 		@include padding-leader(2, $base-font-size);
 		@include padding-trailer(2, $base-font-size);
 
 	}
 	/* MAIN */
 	div[role="main"] {
-		@include columns(8, 10);
-		@include suffix(1,10);
-		@include alpha(true);
-		clear: none;
-		margin-left: 0;
+		clear: none;		
+		@include reset-column();
+		@include alpha();
+		@include columns(12);
+		@include suffix(1);
 	}
 
-	#skills {
-		width: 95%;
-	}
 
 	/* COMPLIMENTARY */
 	aside[role="complementary"] {
-		@include columns(2, 10);
-		@include omega(true);
-		clear: none;
 		margin-left: 0;
-		@include leader(3, $base-font-size);
+		clear: none;		
+		@include columns(4);
+		@include omega();
+		@include leader(1, $base-font-size);
 	
 		h1 {
 			@include adjust-font-size-to($base-font-size);
 		}
+	}
+	
+	.social {
+		li {
+			width: 100%;
+			display: block;
+		}
+	}
+	
+	/* CONTENTINFO */
+
+	#footer-container {
+		@include container();	
+	}
+
+	#footer-content {
+		@include full();
 	}
 
 }/*/mediaquery*/

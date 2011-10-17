@@ -37,7 +37,7 @@
 
 .ui-collapsible-heading-toggle {
 	display: block;
-	@include background-image(linear-gradient(#ffffff, $border-color));	
+	@include background-image(linear-gradient($border-color, $main-bg));	
 	@include padding-leader(0.5);
 	@include padding-trailer(0.5);
 	

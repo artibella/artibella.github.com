@@ -3,9 +3,10 @@
 }
 
 #{headings()} {
-	font-family : $serif-font;
+	@extend .serif;
 	font-weight : bold;
 	text-rendering: optimizelegibility;
+	color: darken($font-color, 10);
 }
 
 h1 { 

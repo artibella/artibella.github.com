@@ -1,18 +1,25 @@
 article {
   overflow: hidden;
-  padding-top: 1em;
+  @include padding-leader(1);
+
   a { @extend .force-wrap; }
   header {
     position: relative;
-    padding-top: 2em;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-    background: $img-border bottom left repeat-x;
+    @include padding-leader(1.5);
+    @include padding-trailer(1);
+    @include trailer(1);
+    
     h1 {
       margin: 0;
-      a { text-decoration: none;
-        &:hover { text-decoration: underline; } }
+      a { 
+				text-decoration: none;
+        
+				&:hover {
+					text-decoration: underline;
+				}
+    	}
     }
+
     p {
       font-size: .9em;
       color: $text-color-light;
@@ -23,15 +30,10 @@ article {
         position: absolute; top: 0;
       }
     }
-    @media only screen and (min-width: 768px) {
-      margin-bottom: 1.5em;
-      padding-bottom: 1em;
-      background: $img-border bottom left repeat-x;
-    }
+
   }
+
   h2 {
-    padding-top: 0.8em;
-    background: $img-border top left repeat-x;
   }
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
   h2:first-child, header + h2 { background: none; }
@@ -39,7 +41,6 @@ article {
     padding-top: .5em;
     margin-bottom: 1em;
     padding-bottom: 1em;
-    background: $img-border bottom left repeat-x;
     font-size: 2.0em; font-style: italic;
     line-height: 1.3em;
   }
@@ -92,10 +93,9 @@ article {
 }
 article + article {
   .blog-index & {
-    background: $img-border top left repeat-x;
   }
 }
-#content .blog-index {
+.content .blog-index {
   padding: { top: 0; bottom: 0; }
   article { padding-top: 2em; }
   article header { background: none; padding-bottom: 0; }
@@ -130,12 +130,11 @@ article + article {
   display: inline-block;
 }
 
-#content nav[role=pagination] {
+.content nav[role=pagination] {
   text-align: center;
   font-size: .95em;
   div {
     position: relative;
-    background: $img-border top left repeat-x;
     padding: {top: 1.5em; bottom: 1.5em;}
   }
   a {
