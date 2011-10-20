@@ -1,4 +1,5 @@
 .ui-collapsible-contain {
+		@include top-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
 }
 
 .ui-collapsible-heading {
@@ -7,20 +8,20 @@
 	font-family: $sans-font;
 		
 	@include adjust-font-size-to($base-font-size);
-	font-weight: normal;
+	font-weight: bold;
 	margin: 0;
 	
 	@include no-select();
 
 	.ui-button-inner {
 		display: inline-block;
-		margin: 0 1.4em 0 0.5em;
+		margin: 0 2.5em 0 0.5em;
 	}
 
 	.ui-icon {
 		@include rotate(0);
 		@include transition-property(all);
-		@include transition-duration(0.5s);
+		@include transition-duration(0.3s);
 	}
 
 	&.ui-collapsible-heading-expanded {		
@@ -37,18 +38,26 @@
 
 .ui-collapsible-heading-toggle {
 	display: block;
-	@include background-image(linear-gradient($border-color, $main-bg));	
+	@include bottom-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0.5);
 	@include padding-leader(0.5);
 	@include padding-trailer(0.5);
-	
+	@include transition-property(all);
+	@include transition-duration(0.3s);
+
+	.ui-collapsible-heading-collapsed & {
+		background: $main-bg;
+	}
+
+	&:hover,
+	.ui-collapsible-heading-expanded & {
+		background: darken($main-bg, 2.5%);
+	}	
 }
 
 .ui-collapsible-content {
+	padding: 0 0.5em;
 	@include padding-leader();
-	padding-left: 8px;
-	padding-right: 8px;
-	
-	
+	@include trailer(1);	
 }
 
 @import "icon/*.png";
@@ -70,9 +79,6 @@
 .ui-btn-icon-left {
 	.ui-iocn {
 		left: 8px;
-	}
-	.ui-collapsible-heading-toggle {
-		
 	}
 }
 

@@ -53,10 +53,11 @@
 		@include columns(4);
 		@include omega();
 		@include leader(1, $base-font-size);
-	
-		h1 {
-			@include adjust-font-size-to($base-font-size);
-		}
+
+		section {
+    		@include adjust-font-size-to(13px);
+      		@include trailer(2, 13px);
+      	}	
 	}
 	
 	.social {
