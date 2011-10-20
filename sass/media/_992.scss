@@ -15,7 +15,20 @@
 	/* TABLES */
 	/* FORMS */
 	/* BANNER */
-	header[role="banner"] {
+	header[role=banner] {
+		> div {
+				@include container();
+		}
+		hgroup {
+			@include full();
+			padding: 0 2em;
+		}			
+	}
+		
+
+	/* NAVIGATION */
+
+	header[role="navigation"] {
 		> div {			
 			@include container();
 		}
@@ -24,8 +37,6 @@
 	#header-content {
 		@include full();
 	}	
-
-	/* NAVIGATION */
    
 	/* CONTENT */
 	.content {
@@ -52,7 +63,6 @@
 		clear: none;		
 		@include columns(4);
 		@include omega();
-		@include leader(1, $base-font-size);
 
 		section {
     		@include adjust-font-size-to(13px);

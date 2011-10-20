@@ -1,7 +1,8 @@
-header[role="banner"] {
+header[role="navigation"] {
 	background: $header-bg;
 	
 	> div {
+		@include container();
 	}
 	
 	h1 {
@@ -23,5 +24,6 @@ header[role="banner"] {
 		font-size: 1em;
 		color: $subtitle-color;
 		font-weight: normal;
+
 	}	
 }

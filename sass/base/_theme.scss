@@ -10,7 +10,7 @@ $font-color: #595959 !default;
 
 // Main Link Colors
 $link-color: #F98D21 !default;
-$link-color-hover: adjust-color($link-color, $lightness: 10, $saturation: 50) !default;
+$link-color-hover: adjust-color($link-color, $lightness: -5, $saturation: 80) !default;
 $link-color-visited: adjust-color($link-color, $lightness: -4) !default;
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 

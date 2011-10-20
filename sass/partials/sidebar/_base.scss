@@ -8,28 +8,36 @@ aside[role=complementary] {
 		@include trailer(1);
 		margin-left: 0;
         list-style: none;
-        @include top-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
+		@include top-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
 	}
 	
 	li {
-    list-style: none;
+    	list-style: none;
+		@include bottom-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0.5);
 		@include padding-leader(0.5);
 		margin: 0;
-		@extend .side-shadow-border;
-		
+		@include transition-property(all);
+		@include transition-duration(0.3s); 
+
+
 		p:last-child {
 		  margin-bottom: 0;
+		}		
+
+
+		&:hover {
+			background: darken($main-bg, 2.5%);
 		}
-  }
-
-  a {
-    color: inherit;
-  }
-
-  &:hover a {
-    color: $sidebar-link-color;
-    &:hover { color: $sidebar-link-color-hover; }
-  }
+  	}
+  	
+  	a { 		
+  	  	color: inherit;
+  	}
+  	
+  	&:hover a {
+    	color: $sidebar-link-color;
+    	&:hover { color: $sidebar-link-color-hover; }
+  	}
 }
 
 .aside-alt-link {

@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
 require 'susy'
-
+Sass::Plugin.options[:debug_info] = true
 project_type = :stand_alone
 
 # Publishing paths
@@ -14,5 +14,5 @@ sass_dir = "sass"
 images_dir = "source/images"
 fonts_dir = "source/fonts"
 
-line_comments = false
+line_comments = true
 #output_style = :compressed

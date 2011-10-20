@@ -17,8 +17,17 @@
 	/* TABLES */
 	/* FORMS */
 	/* BANNER */
+	header[role=banner] {
+		> div {
+			@include container();
+		}
+		hgroup {
+			@include full();
+		}		
+	}
 
-	header[role="banner"] {
+	/* NAVIGATION */
+	header[role="navigation"] {
 		> div {
 			@include container();
 		}
@@ -26,9 +35,8 @@
 	
 	#header-content {
 		@include full();
-	}	
+	}
 
-	/* NAVIGATION */
 	/* CONTENT */
 	.content {
 		@include container();

@@ -18,7 +18,17 @@
 	/* TABLES */
 	/* FORMS */
 	/* BANNER */
-	header[role="banner"] {
+	header[role=banner] {
+		> div {
+			@include container();
+		}
+		hgroup {
+			@include full();
+		}		
+	}
+
+	/* NAVIGATION */
+	header[role="navigation"] {
 		> div {
 			@include container();
 		}
@@ -28,7 +38,6 @@
 		@include full();
 	}
 
-	/* NAVIGATION */
 	nav {
 	
 		margin: 0 0 20px 0;

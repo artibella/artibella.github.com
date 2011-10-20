@@ -42,7 +42,6 @@
     } @else {
         @include box-shadow($shadow-color $shadow-size 0);
     }
-
 }
 
 @mixin top-shadow-border($size: 1px, $shadow-size: 1px, $color: $border-color, $shadow-color: $shadow-border-color, $lines: 1, $font-size: $base-font-size) {

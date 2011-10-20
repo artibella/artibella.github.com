@@ -2,7 +2,15 @@
 {% include head.html %}
 <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %}>
 	<div id="container">
-  		<header role="banner">{% include header.html %}</header>
+  		<header role="navigation">{% include header.html %}</header>
+  		<header role="banner">
+  			<div>
+				<hgroup>
+					<h1>Hello there!</h1>
+					<h2>I'm Richard Bausek, an interactive developer and UX enthusiast working at <a href="http://www.moccu.com" target="_blank">Moccu</a> in Berlin.</h2> 
+				</hgroup>
+			</div>		
+		</header>
    		<div id="content" class="content" data-role="content-primary">
       		{{ content | expand_urls: root_url | backtick_codeblock | smart_quotes }}
   		</div>

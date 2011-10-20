@@ -8,11 +8,17 @@
 		
 
 	a {
+		@include transition-property(all);
+		@include transition-duration(0.3s); 		
 		padding-left: 38px;
 		@include padding-leader(0.25, $base-line-height);
 		@include padding-trailer(0.25, $base-line-height);
 		height: $base-line-height;
 		display: block;
 		vertical-align: center;	
+
+		&:hover {
+			margin-left: 1em;	
+		}
 	}
 }
