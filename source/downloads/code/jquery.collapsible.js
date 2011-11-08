@@ -25,8 +25,7 @@
 				.wrapInner("<a href='#' class='ui-collapsible-heading-toggle'></a>");
 			
 			collapsibleContain
-				.bind("collapse", function(event, duration) {
-					duration = duration ? duration : options.expandDuration;
+				.bind("collapse", function(event) {
 					if (!event.isDefaultPrevented() && $(event.target).closest(".ui-collapsible-contain").is(collapsibleContain)) {
 						event.preventDefault();
 
@@ -35,13 +34,10 @@
 						
 						collapsibleContent
 							.addClass("ui-collapsible-content-collapsed").attr( "aria-hidden", true )
-							.slideUp(duration);
-						$el.data('uiCollapsed', true);
+							.slideUp(options.expandDuration);	
 					}
 				})
-				.bind("expand", function(event, duration) {
-					duration = duration ? duration : options.expandDuration;
-
+				.bind("expand", function(event) {
 					if (!event.isDefaultPrevented()) {
 						event.preventDefault();
 
@@ -51,11 +47,9 @@
 						collapsibleContent
 							.removeClass("ui-collapsible-content-collapsed").attr("aria-hidden", false)
 							.slideDown(options.expandDuration);
-						
-						$el.data('uiCollapsed', false);
 					}
 				})
-				.trigger( options.collapsed ? "collapse" : "expand", 0 );
+				.trigger( options.collapsed ? "collapse" : "expand" );
 			
 			collapsibleHeading
 				.bind( "click", function(event) {

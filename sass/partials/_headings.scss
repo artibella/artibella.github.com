@@ -1,3 +1,6 @@
+$h1-size: 24px;
+$h2-size: 20px;
+
 .heading {
   font-family: $serif-font;
 }
@@ -10,15 +13,12 @@
 }
 
 h1 { 
-	@include adjust-font-size-to(48px, 2);
-	@include trailer(0.5,$base-line-height);
+	@include adjust-font-size-to($h1-size);
+	@include trailer(1,$base-line-height);
 }
 
-section > h1 {
-}
 
-h2, section h1, aside h1 {
-	$h2-size: 20px;
+h2, section h1, article h1, aside h1 {
 	@include adjust-font-size-to($h2-size, 1);
 	@include trailer(1,$h2-size);
 }
@@ -26,8 +26,8 @@ h2, section h1, aside h1 {
 h3,
 section h2, 
 section section h1 { 
-	@include adjust-font-size-to(24px, 1);
-	@include trailer(1, 24px);
+	@include adjust-font-size-to(20px, 1);
+	@include trailer(1, 20px);
 }
 
 h4,

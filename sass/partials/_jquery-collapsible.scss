@@ -1,5 +1,5 @@
 .ui-collapsible-contain {
-		@include top-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
+	@include top-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
 }
 
 .ui-collapsible-heading {
@@ -43,6 +43,8 @@
 	@include padding-trailer(0.5);
 	@include transition-property(all);
 	@include transition-duration(0.3s);
+	color: $font-color;
+	font-weight: normal;
 
 	.ui-collapsible-heading-collapsed & {
 		background: $main-bg;
@@ -84,4 +86,14 @@
 
 .ui-icon-plus {
 	@include icon-sprite(plus);
+}
+
+header[role="banner"] {
+	.ui-collapsible-contain {
+		@include remove-shadow-border();
+	}
+	.ui-collapsible-content {
+		padding: 0;
+		@include trailer(0);	
+	}	
 }

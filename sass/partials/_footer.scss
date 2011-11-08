@@ -1,8 +1,7 @@
 /* CONTENTINFO */
 footer[role="contentinfo"] {
-  @extend .sans;
+ 	@extend .sans;
 
-	@include adjust-font-size-to(12px);
 	@include padding-trailer(1, 12px);
 	color: $footer-color;
 	background: $footer-bg;
@@ -20,10 +19,6 @@ footer[role="contentinfo"] {
 	}
 }
 
-#footer-container {
-	@include container();	
-}
-
 #footer-content {
-	@include full();
+	@include adjust-font-size-to(12px);
 }

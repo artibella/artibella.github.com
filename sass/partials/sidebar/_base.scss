@@ -1,6 +1,5 @@
 aside[role=complementary] {
 	color: $sidebar-color;
-	text-shadow: lighten($sidebar-bg, 8) 0 1px;
   
 	a { @extend .force-wrap; }
 

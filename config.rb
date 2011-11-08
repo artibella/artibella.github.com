@@ -1,5 +1,7 @@
 # Require any additional compass plugins here.
 require 'susy'
+require "compass-growl"
+
 Sass::Plugin.options[:debug_info] = true
 project_type = :stand_alone
 

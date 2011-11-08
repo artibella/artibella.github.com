@@ -1,5 +1,5 @@
-$sans-font: "Nobile", "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;
-$serif-font: "Droid Serif", "Georgia", "Times New Roman", "Palatino", "Hoefler Text", "Baskerville", serif;
+$sans-font: museo, "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", "Verdana", "Helvetica", "Gill Sans", sans-serif;
+$serif-font: museo-slab, "Droid Serif", "Georgia", "Times New Roman", "Palatino", "Hoefler Text", "Baskerville", serif;
 $monospace-font: "Droid Sans Mono", Menlo, Courier New, Courier, Mono, monospace;
 $mono: $monospace-font;
 
@@ -203,8 +203,8 @@ small { font-size: .8em; }
 big { font-size: 1.2em; }
 
 
-
-.has-pullquote:before {
+.pullquote-right:before,
+.pullquote-left:before {
   /* Reset metrics. */
   padding: 0;
   border: none;
@@ -223,6 +223,13 @@ big { font-size: 1.2em; }
   font-size: 1.4em;
   line-height: 1.45em;
 }
+
+.pullquote-left:before {
+  /* Make left pullquotes align properly. */
+  float: left;
+  margin: .5em 1.5em 1em 0;
+}
+
 
 /* @extend this to force long lines of continuous text to wrap */
 .force-wrap {

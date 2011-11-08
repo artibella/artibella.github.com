@@ -1,5 +1,5 @@
 .sharing {
-  p.meta + & {
-    padding: { top: 1em; left: 0; }
-  }
+    p.meta + & {
+        @include padding-leader(1);
+    }
 }

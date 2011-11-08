@@ -13,3 +13,53 @@ figcaption {
 	display : block;
 	font-weight : normal;
 }
+
+img, video, .flash-video {
+    max-width: 100%;
+    height: auto;
+    border: .5em solid #fff;
+    @include border-radius(.3em);
+    @include box-shadow(rgba(#000, .15) 0 1px 4px);
+    @include box-sizing(border-box);
+    display: block;
+    @include trailer(1);
+}
+
+img {
+    &.left {
+        float: left;
+        margin-right: 1.5em;
+    }
+    &.right {
+        float: right;
+        margin-left: 1.5em;
+    }
+    &.left, &.right {
+        @include trailer(0.5);
+    }
+}
+
+video { 
+    display: block;
+    @include trailer(1);    
+    width: 100%;
+}
+
+.flash-video {
+    > div {
+        position: relative;
+        display: block;
+        padding-bottom: 56.25%;
+        padding-top: 1px;
+        height: 0;
+        overflow: hidden;
+
+        iframe, object, embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -13,6 +13,7 @@ group :development do
   gem 'rb-fsevent'
   gem 'stringex'
   gem 'compass-susy-plugin'
+  gem "compass-growl"  
 end
 
 gem 'sinatra', '1.2.6'

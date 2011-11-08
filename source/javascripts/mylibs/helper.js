@@ -88,7 +88,7 @@ MBP.coords = [];
 
 MBP.splash = function () {
   var filename = navigator.platform === 'iPad' ? 'h/' : 'l/';
-  document.write('<link rel="apple-touch-startup-image" href="/img/' + filename + 'splash.png" />' );
+  document.write('<link rel="apple-touch-startup-image" href="/images/' + filename + 'splash.png" />' );
 }
 
 
@@ -118,4 +118,48 @@ MBP.autogrow = function (element, lh) {
 }
 
 
+if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+    var viewportmeta = document.querySelectorAll('meta[name="viewport"]')[0];
+    if (viewportmeta) {
+        viewportmeta.content = 'width=device-width, minimum-scale=1.0, maximum-scale=1.0';
+        document.body.addEventListener('gesturestart', function() {
+            viewportmeta.content = 'width=device-width, minimum-scale=0.25, maximum-scale=1.6';
+        }, false);
+    }
+}
+
+
+/*
+* matchMedia() polyfill - test whether a CSS media type or media query applies
+* authors: Scott Jehl, Paul Irish, Nicholas Zakas
+* Copyright (c) 2011 Scott, Paul and Nicholas.
+* Dual MIT/BSD license
+*/
+
+
+window.matchMedia = window.matchMedia || (function(doc, undefined){
+  
+  var bool,
+      docElem  = doc.documentElement,
+      refNode  = docElem.firstElementChild || docElem.firstChild,
+      // fakeBody required for <FF4 when executed in <head>
+      fakeBody = doc.createElement('body'),
+      div      = doc.createElement('div');
+  
+  div.id = 'mq-test-1';
+  div.style.cssText = "position:absolute;top:-100em";
+  fakeBody.appendChild(div);
+  
+  return function(q){
+    
+    div.innerHTML = '&shy;<style media="'+q+'"> #mq-test-1 { width: 42px; }</style>';
+    
+    docElem.insertBefore(fakeBody, refNode);
+    bool = div.offsetWidth == 42;  
+    docElem.removeChild(fakeBody);
+    
+    return { matches: bool, media: q };
+  };
+  
+})(document);
 

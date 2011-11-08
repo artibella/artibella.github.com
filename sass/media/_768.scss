@@ -1,87 +1,111 @@
 @media only screen and (min-width: 768px) {
 
-	$total-cols : 8;
-	$col-width : 5em;
-	$gutter-width : 1em;
-	$side-gutter-width : 1em;
+    $total-cols : 8;
+    $col-width : 5em;
+    $gutter-width : 1em;
+    $side-gutter-width : 1em;
 
-	/* ROOT */
-	#container {
-	}
+    /* ROOT */
+    #container {
+    }
    
-	/* HEADINGS */
+    /* HEADINGS */
    
    
-	/* TYPOGRAPHY */
-	/* LINKS */
-	/* FIGURES & IMAGES */
-	/* TABLES */
-	/* FORMS */
-	/* BANNER */
-	header[role=banner] {
-		> div {
-			@include container();
-		}
-		hgroup {
-			@include full();
-		}		
-	}
+    /* TYPOGRAPHY */
+    /* LINKS */
+    /* FIGURES & IMAGES */
+    /* TABLES */
+    /* FORMS */
+    /* BANNER */
+    header[role=banner] {
+        @include padding-leader(1);
+        @include bottom-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 1);
 
-	/* NAVIGATION */
-	header[role="navigation"] {
-		> div {
-			@include container();
-		}
-	}
+        .banner-container {
+            @include grid-container(false);
+        }
+        
+        .banner-content {
+            @include full();
 
-	#header-content {
-		@include full();
-	}
+            hgroup {
+                float: left;
+            }
+        }
+        
+        h1 {
+            @include adjust-font-size-to(44px, 2, $base-font-size);
+        }    
+    }
 
-	nav {
-	
-		margin: 0 0 20px 0;
-		ul {
+    /* NAVIGATION */
 
-			@include horizontal-list(0);
-			@include full();		
-			li {
-				a {
-					border-bottom: none;
-				}
-			}
-		}
-	}
-	/* CONTENT */
-	.content {
-		@include container;
-		@include susy-grid-background;		
-	}
-	
-	/* 11.MAIN */
-	div[role="main"] {
-		@include full();
+    nav[role="navigation"] {
+        float: right;
+        
+        div.ui-collapsible-content,
+        div.ui-collapsible-content-collapsed {
+            display: block !important;
+        }
+        
+        ul {
+            @include horizontal-list(1.5em);
+            @include remove-shadow-border();
 
-	}
-	/* MAIN */
-	/* COMPLIMENTARY */
-	aside[role="complementary"] {
-			@include full();
-	}
-	
-	.social {
-		li {
-			width: 33,3333333333%;
-		}	
-	}	
-	/* CONTENTINFO */
-	#footer-container {
-		@include container();	
-	}
+            li {
+                @include remove-shadow-border();
 
-	#footer-content {
-		@include full();
-	}
+                a {
+                }
+            }
+        }
+    }
+
+    .navtoggle {
+        display: none;
+    }
+
+    /* STAGE */
+    .stage {
+        > div {
+            @include grid-container(false);
+        }
+        hgroup {
+            @include full();
+        }
+    }
+    
+    /* CONTENT */
+    .content {
+        @include grid-container(false);
+        @include susy-grid-background;      
+    }
+    
+    /* 11.MAIN */
+    div[role="main"] {
+        @include full();
+
+    }
+    /* MAIN */
+    /* COMPLIMENTARY */
+    aside[role="complementary"] {
+            @include full();
+    }
+    
+    .social {
+        li {
+            width: 33,3333333333%;
+        }   
+    }   
+    /* CONTENTINFO */
+    #footer-container {
+        @include grid-container(false); 
+    }
+
+    #footer-content {
+        @include full();
+    }
 
 
 }/*/mediaquery*/

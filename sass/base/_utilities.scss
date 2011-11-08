@@ -27,6 +27,14 @@
   @return $text-color;
 }
 
+@mixin grid-container($applyClearfix: true) {
+  @if $applyClearfix {
+    @include pie-clearfix;
+  }
+  margin: auto;
+  width: columns-width();
+  max-width: 100%;
+}
 
 
 @mixin apply-side-shadow-border($side, $size: 1px, $shadow-size: 1px, $color: $border-color, $shadow-color: $shadow-border-color, $lines: 1, $font-size: $base-font-size) {
@@ -40,8 +48,15 @@
         @include box-shadow($color 0 -#{$shadow-size});
         border-color: $shadow-color;
     } @else {
-        @include box-shadow($shadow-color $shadow-size 0);
+        @include box-shadow($shadow-color 0 $shadow-size );
+        border-color: $color;
+
     }
+}
+
+@mixin remove-shadow-border() {
+    border: none;
+    @include box-shadow(none);
 }
 
 @mixin top-shadow-border($size: 1px, $shadow-size: 1px, $color: $border-color, $shadow-color: $shadow-border-color, $lines: 1, $font-size: $base-font-size) {

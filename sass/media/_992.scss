@@ -1,90 +1,94 @@
 @media only screen and (min-width: 992px) {
 
-	/* ROOT */
-	$total-cols : 16;
-	$col-width : 3em;
-	$gutter-width : 0.75em;
-	$side-gutter-width: 1.5em;
+    /* ROOT */
+    $total-cols : 16;
+    $col-width : 3em;
+    $gutter-width : 0.75em;
+    $side-gutter-width: 1.5em;
 
-	#container {
-	}
-	/* HEADINGS */
-	/* TYPOGRAPHY */
-	/* LINKS */
-	/* FIGURES & IMAGES */
-	/* TABLES */
-	/* FORMS */
-	/* BANNER */
-	header[role=banner] {
-		> div {
-				@include container();
-		}
-		hgroup {
-			@include full();
-			padding: 0 2em;
-		}			
-	}
-		
+    #container {
+    }
+    /* HEADINGS */
+    /* TYPOGRAPHY */
+    /* LINKS */
+    /* FIGURES & IMAGES */
+    /* TABLES */
+    /* FORMS */
+    /* BANNER */
+    header[role=banner] {
+        .banner-container {
+            @include grid-container(false);
+        }
+        
+        .banner-content {
+            @include full();
+        }       
+    }
+        
 
-	/* NAVIGATION */
+    /* NAVIGATION */
 
-	header[role="navigation"] {
-		> div {			
-			@include container();
-		}
-	}
 
-	#header-content {
-		@include full();
-	}	
+    
+    /* STAGE */
+    .stage {
+        > div {
+            @include grid-container(false);
+        }
+        hgroup {
+            @include full();
+        }
+    }   
    
-	/* CONTENT */
-	.content {
-		@include container();
-		@include susy-grid-background;
+    /* CONTENT */
+    .content {
+        @include grid-container(false);
+        @include susy-grid-background;
 
-		@include padding-leader(2, $base-font-size);
-		@include padding-trailer(2, $base-font-size);
+        @include padding-leader(2, $base-font-size);
+        @include padding-trailer(2, $base-font-size);
 
-	}
-	/* MAIN */
-	div[role="main"] {
-		clear: none;		
-		@include reset-column();
-		@include alpha();
-		@include columns(12);
-		@include suffix(1);
-	}
+    }
+    
+    /* MAIN */
+    div[role="main"] {
+        clear: none;        
+        @include reset-column();
+        @include alpha();
+        @include columns(12);
+        @include suffix(1);
+    }
 
 
-	/* COMPLIMENTARY */
-	aside[role="complementary"] {
-		margin-left: 0;
-		clear: none;		
-		@include columns(4);
-		@include omega();
+    /* COMPLIMENTARY */
+    aside[role="complementary"] {
+        margin-left: 0;
+        clear: none;        
+        @include columns(4);
+        @include omega();
 
-		section {
-    		@include adjust-font-size-to(13px);
-      		@include trailer(2, 13px);
-      	}	
-	}
-	
-	.social {
-		li {
-			width: 100%;
-			display: block;
-		}
-	}
-	
-	/* CONTENTINFO */
+        section {
+            ul, div, article {
+                @include adjust-font-size-to(13px);
+            }
+        }   
+    }
+    
+    .social {
+        li {
+            width: 100%;
+            display: block;
+        }
+    }
+    
+    /* CONTENTINFO */
 
-	#footer-container {
-		@include container();	
-	}
+    #footer-container {
+        @include grid-container(false);
+    }
 
-	#footer-content {
-		@include full();
-	}
+    #footer-content {
+        @include full();
+    }
 
 }/*/mediaquery*/
