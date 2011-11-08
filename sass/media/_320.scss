@@ -67,7 +67,7 @@ header[role=banner] {
     }
     
     h2 {
-        margin-bottom: 0;
+        @include trailer(0.5);
     }   
 
 }
