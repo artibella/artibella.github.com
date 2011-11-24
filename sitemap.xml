@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://artibella.github.com/blog/2011/11/01/a-new-site-for-a-fresh-start/</loc>
+        <lastmod>2011-11-24T01:59:25+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://artibella.github.com/404.html</loc>
+        <lastmod>2011-11-20T20:12:19+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://artibella.github.com/about/</loc>
+        <lastmod>2011-11-24T01:59:25+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://artibella.github.com/blog/archives/</loc>
+        <lastmod>2011-11-24T01:59:25+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://artibella.github.com/</loc>
+        <lastmod>2011-11-24T01:59:25+01:00</lastmod>
+    </url>
+</urlset>
