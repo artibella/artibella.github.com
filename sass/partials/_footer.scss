@@ -14,7 +14,7 @@ footer[role="contentinfo"] {
 		@include link-colors($footer-link-color, $footer-link-color-hover, $visited: $footer-link-color);
 	}
 	
-	p:last-child {
+	p {
 		@include trailer(0);
 	}
 }

@@ -4,62 +4,107 @@ title: "About"
 date: 
 comments: false
 sharing: false
-footer: true
+footer: false
 ---
 
-<section id="about">
+<section id="about" itemscope itemtype="http://schema.org/Person">
     <header>
         <h1>About me</h1>
     </header>
-    <p>{% img left /images/me.jpg Richard Bausek %} Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+    <p>Crafting code for the web since 2000 I have gathered experience working with a wide range of web technologies, specializing in frontend development with web standards (HTML5, CSS3, JavaScript) and the Flash platform (Flash, Flex, AIR) for desktop and mobile environments. The last four and a half years I have been working as a senior developer for <a href="http://www.moccu.com" target="_blank" title="Moccu - Digital creative agency">Moccu</a> in Berlin.</p>
+    <p>Seeking new challenges outside the world of web agencies, I'll be available for full time work again starting 2012. If you happen to be building cutting edge products, services or applications and in need of an experienced frontend developer then please don't hesitate to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#97;&#114;&#116;&#105;&#98;&#101;&#108;&#108;&#97;&#46;&#99;&#111;&#109;">contact me</a>.</p>
+    <p>When not working on projects, I enjoy experimenting with new tools and technologies, help run the  <a href="http://www.rotaug.com" title="Rotaug, mixed media artist collective" target="_blank">Rotaug</a> artist collective and suck at playing the bass guitar.</p>
 </section>
+
 <section id="skills">
     <header>
-        <h1>What I do</h1>
+        <h1>Skills</h1>
     </header>
-    <div class="skillslist">
-        <div data-role="collapsible" data-collapsed="true">
-            <h2>Web and mobile development</h2>
+    <ul class="skill-list">
+        <li data-role="collapsible" data-collapsed="true">
+            <h2>HTML5 and CSS3</h2>
             <div>
-                <p>I write clean, semantic and accessible code for websites and applications for the desktop and mobile. Responsive design, prototyping, jquery, compass, </p>              
+                <p>I write standards based, maintainable, semantic and accessible code for desktop and mobile platforms. After innumerable battles fought with various versions of Internet Explorer, I know the tricks and tweaks required to deal with the misbehavior of these browsers.</p>  
+                <dl class="tools">
+                    <dt>Techniques</dt>
+                    <dd>Progressive enhancement, Responsive design, Mobile first, Microdata and Microformats, <abbr title="Accessible Rich Internet Applications Suite">WAI-ARIA</abbr>, SEO</dd>
+                    <dt>CSS3</dt>
+                    <dd>Sass, Compass framework, Mediaqueries, grid systems</dd>
+                </dl>         
             </div>
-        </div>
-        <div data-role="collapsible" data-collapsed="true">
-            <h2>Flash, Flex and AIR development</h2>
+        </li>
+        <li data-role="collapsible" data-collapsed="true">
+            <h2>Javascript</h2>
             <div>
-                <p>As an Flash oldschooler starting with Flash 4 in 2000, I followed its evolution over the years:</p>
-                <ul>
-                    <li>from timeline code (remember <i>tellTarget()</i> &mdash; YUK!)</li>
-                    <li>to prototype programming in Actionscript 1 &mdash; a skill becoming usefull again for Javascript development</li>
-                    <li>to the introduction of real <abbr title="Object oriented programming">OOP</abbr> in Actionscript 2 and the use of design patterns</li>
-                    <li>to the stricted-typed event-driven sweetness of Actionscript 3 and the upcoming of great frameworks (<a href="http://www.adobe.com/products/flex/" target="_blank">Flex</a>, <a href="http://www.robotlegs.org/" target="_blank">Robotlegs</a>, <a href="http://puremvc.org/" target="_blank">PureMVC</a>, Gaia, Away3D, ...)</li>
-                </ul>
-                <p>Even though Flash had quite some bad press in the last years we must admit that it helped us build a richer internet that wouldn't have been possible using web standards. Now with HTML5 and CSS3 gaining great adaption in browsers we can offload most of the workload from Flash to the open web stack. 
-                But there is definetly still a valid place for Flash in web development. Some projects still aren't possible or extremly complicated using HTML5/Javascript but easy to do in Flash. It's a great tool for interface mockups and interactive prototypes. And combined with Adobe AIR its a breeze to deploy apps to multiple platforms (desktop, mobile, web) using a single code base.
+                <p>For some JavaScript seems like a strange toy language. I'm convinced that if you understand and embrace the <a href="http://www.amazon.com/exec/obidos/ASIN/0596517742/" title="Book: JavaScript the good parts" target="_blank">Good Parts</a> of the language you have a mighty tool at hand. In my projects I apply unobtrusive JavaScript to enhance websites and drive dynamic web apps.</p>  
+                <dl class="tools">
+                    <dt>JavaScript libraries and frameworks</dt>
+                    <dd>JQuery (plugin development, JQuery UI, JQuery Mobile), Modernizr <br />
+                    Dabbling in: Backbone.js, Sproutcore, CoffeeScript</dd>
+                </dl>         
+            </div>
+        </li>        
+        <li data-role="collapsible" data-collapsed="true">
+            <h2>Flash, Flex and AIR</h2>
+            <div>
+                <p>I have 12 years of experience working with the Flash platform creating dynamic Flash sites, applications, widgets and games.</p>
+                <dl class="tools">
+                    <dt>Technologies</dt>
+                    <dd><abbr title="ActionScript 3">AS3</abbr>, <abbr title="ActionScript 2">AS2</abbr>, MXML, <abbr title="Adobe Integrated Runtime">AIR</abbr>, Flex SDK, Remoting</dd>
+                    <dt>Frameworks</dt>
+                    <dd>Robotlegs, Flex, PureMVC, GAIA, OSMF, Away3D, PaperVision3D, Tweenlite, Box2D</dd>
+                    <dt>Development Tools</dt>
+                    <dd>IntelliJ (my current favorite), FlashBuilder, FDT, FlexUnit, Apache Ant</dd>
+                </dl>
+            </div>
+        </li>  
+        <li data-role="collapsible" data-collapsed="true">
+            <h2>UX Design and Development</h2>
+            <div>
+                <p>I am strongly devoted to creating easy to use, well designed and responsive interfaces. As a developer I'm aware of having great responsibility for the overall user experience. I am constantly busy learning and keeping up to date with interface design patterns, <abbr title="user experience">UX</abbr>, <abbr title="information architecture">IA</abbr> and <abbr title="interaction design">IxD</abbr> methods and applying them in my work to offer the users the most engaging interface solutions.
                 </p>
-                <p>As for me, I will keep Flash in my toolbox as it is still the best <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/" target="_blank">polyfill</a> for the web. But remember to choose the right tool for the job to serve your user the best possible experience and don't let your desicion be led by some tech flame wars.
-            </div>
-        </div>  
-        <div data-role="collapsible" data-collapsed="true">
-            <h2>UX design and development</h2>
-            <div>
-                <p>You know this lovely feeling when you use software or websites that just work the way you expect it to, that looks and feels nice, never leaves you in the dark about what is happening, saves you time and that is so cool that you want to tell all your friends about it? Well, this is the kind of emotions I want to give the users of my work.</p> 
-                <p>As a developer you have a great responbility for the overall user experience of your product. It's the developer who breathes life into the designs and scribbles and shapes the final result. But great user experience can only be achieved if the whole project team and workflow is user focused and it is my part, as a developer, to assist them with profound knowledge in UI design patterns, <abbr title="Interaction Design">IxD</abbr> and technical consulting. 
-                </p> 
+                <dl class="tools">
+                    <dt>Techniques</dt>
+                    <dd>Wireframing, prototype development, interaction design, navigation design, technical consulting</dd>
+                </dl>                
             </div>
             
-        </div>
-        <div data-role="collapsible" data-collapsed="true">     
-            <h2>Backend development</h2>
+        </li>
+        <li data-role="collapsible" data-collapsed="true">     
+            <h2>Backend Development</h2>
             <div>
-                <p>To be honest, even tough I'm very experienced in server-side development, it is not my favorite field of work.</p>
-
-                <p>I try to focus my efforts and research on frontend development and rich interfaces, but I still enjoy being able to build backend solutions on my own if the project requires it.</p>
-
-                <p>In the last years I have build and used various backend systems and my <abbr title="Content Management System">CMS</abbr> of choice used to be <a href="http://www.typo3.org">TYPO3</a>. I have built 20+ small to large scale websites with it and programmed many extensions for it. TYPO3 is a great and flexible piece of software but this flexiblity comes with the price of a bloated system which causes bad user experience for the editors and the developers.</p>
-
-                <p>Two years ago I picked up Ruby as a new programming language and of course took a deeper look into the <a href="http://rubyonrails.org/">Ruby on Rails</a> framework — what an eye opening experience that was. Everything that annoyed or bored me about TYPO3 was done right in <a href="http://rubyonrails.org/">Rails</a> (convention over configuration, <abbr title="Don't repeat yourself">DRY</abbr>, Active Record, ...). Also I never really liked PHP as an scripting language so I made the decision to no longer use it. If I have to do server-side development I'll use frameworks written in Ruby (Rails, Sinatra, Rack) or Node.js.</p>             
+                <p>While I'm most interested in frontend development and rich interfaces, I also have a solid background in server-side programming with <a href="http://www.typo3.org" title="TYPO3">TYPO3 <abbr title="Content Management System">CMS</abbr></a>, Wordpress and custom solutions. In the past two years I have shifted my focus from the <abbr title="Linux Apache MySQL PHP"></abbr>LAMP stack to more modern environments/frameworks like node.js, Ruby on Rails and NoSQL.</p>
+                <dl class="tools">
+                    <dt>Technologies</dt>
+                    <dd>PHP, MySQL, Ruby<br />
+                    Dabbling in: CouchDB, MongoDB
+                    <dt>Frameworks</dt>
+                    <dd>TYPO3, Wordpress<br />
+                    Dabbling in: Ruby On Rails, Sinatra, node.js
+                </dd>
+                </dl>                 
             </div>
-        </div>  
-    </div>
+        </li>
+        <li data-role="collapsible" data-collapsed="true">     
+            <h2>Other Skills</h2>
+            <div>
+                <dl class="tools">
+                    <dt>Version Control Systems</dt>
+                    <dd>Git, SVN</dd>
+                    <dt>Operating Systems</dt>
+                    <dd>OS X, Windows, Linux (comfortable working with command line, server management and setup)</dd>
+                    <dt>Design and Animation</dt>
+                    <dd>Practiced at working with creative software (Photoshop, Illustrator, Fireworks, Flash, Premiere, After Effects, Cinema 4D), soft spot for design, typography and animation</dd>
+
+                </dl>
+            </div>
+        </li>          
+    </ul>
+</section>
+<section id="work">
+    <header>
+        <h1>Clients</h1>
+    </header>
+    <p>Though the years I have worked for a wide range of companies and organizations including: WWF, Greenpeace, L'Oréal, Garnier, Wonderful Pistachios, Zurich Versicherung, KIA, Arte, Austrian Green Party, McDonald's, Telekom Austria, Canadian Embassy Berlin</p>
+    <p>I'm still working on my portfolio but I'm happy send out examples of my work on <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#101;&#108;&#108;&#111;&#64;&#97;&#114;&#116;&#105;&#98;&#101;&#108;&#108;&#97;&#46;&#99;&#111;&#109;">request</a>.</p>
 </section>

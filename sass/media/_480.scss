@@ -44,10 +44,16 @@
     /* CONTENT */
     .content {
         @include grid-container(false);
-        @include susy-grid-background;
+        @include grid-background($total-cols, $col-width, $gutter-width, $side-gutter-width);
         
     }
 
+    #blog-archives {
+        article {
+            @include box-shadow(none);
+            border: none;
+        }
+    } 
 
     /* MAIN */
     div[role="main"] {

@@ -22,7 +22,7 @@ html {
 body { 
     margin : 0 auto;
     padding : 0;
-    color : $font-color;
+    color : $text-color;
     background: $page-bg;
     position: relative;
 }
@@ -44,9 +44,10 @@ body {
 
 header[role=banner] {
     @include susy-grid-background;
-    @include bottom-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
-
-    background: lighten($main-bg, 2%);  
+    background-color: $banner-bg;
+    color: $banner-color;
+    border-top: $banner-border;
+    @include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
 
     .banner-container {
         @include container();
@@ -55,15 +56,16 @@ header[role=banner] {
     .banner-content {
         @include full();
         position: relative;
-
     }
 
-    text-shadow: lighten($main-bg, 8) 0 1px;
 
     h1 {
-        color: lighten($font-color, 10%);
         @include adjust-font-size-to(24px, 2, $base-font-size);
         @include trailer(0);
+        a {
+            color: $banner-title-color;
+
+        }
     }
     
     h2 {
@@ -75,6 +77,7 @@ header[role=banner] {
 /* NAVIGATION */
 
 nav[role=navigation] {
+
     ul {
         @include trailer(1);
         margin: 0;
@@ -83,24 +86,41 @@ nav[role=navigation] {
     
     li {
         list-style: none;
-        @include bottom-shadow-border(1px, 1px, lighten($sidebar-border,5), lighten($shadow-border-color,3), 0.5);;
-        @include padding-leader(0.5);
+        @include bottom-shadow-border(1px, 1px, darken($banner-bg,10%), lighten($banner-bg,10%), 0);;
+        
         margin: 0;
         @include transition-property(all);
         @include transition-duration(0.3s);
-        
-        a {
-            display: block;
-        }
+
     }
+
     li:last-child {
         border: none;
         @include box-shadow(none);
     }
 
-    div.ui-collapsible-content-collapsed {
-            display: hidden;
-    }    
+        
+    a {
+        display: block;
+        text-transform: uppercase;
+        @include padding-leader(0.5);
+        @include padding-trailer(0.5);
+        @include link-colors($nav-color, $hover: $nav-color-hover);
+                  
+    }
+
+    .ui-collapsible-heading {
+        @include reset-select();   
+    }
+
+    .ui-collapsible-content-collapsed {
+        display: hidden;
+    }
+
+    .ui-collapsible-content {
+        margin-top: 0;
+    }
+     
 }
 
 .navtoggle {
@@ -111,24 +131,34 @@ nav[role=navigation] {
     height: 64px;
     background: $main-bg;
     margin: 0;
-    @include padding-leader(0.75, 14px);
-    @include padding-trailer(0.5, 14px);
-    @include adjust-font-size-to(14px, 1, $base-font-size);
     text-align: center;
     z-index: 100;
     cursor: pointer;
-    @include apply-side-shadow-border(left, 1px, 1px, $sidebar-border, $shadow-border-color, $lines: 0);
-    @include apply-side-shadow-border(right, 1px, 1px, $sidebar-border, $shadow-border-color, $lines: 0);
-    @include bottom-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
+
+    @include apply-side-shadow-border(left, 1px, 1px, $border-color, $shadow-border-color, $lines: 0);
+    @include apply-side-shadow-border(right, 1px, 1px, $border-color, $shadow-border-color, $lines: 0);
+    @include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
     @include border-bottom-radius(12px);
+
+    a {
+        @include adjust-font-size-to(14px, 0.75, $base-font-size);
+        padding: 0 8px;
+        @include padding-leader(0.5, 14px);
+        @include padding-trailer(0.5, 14px);        
+        display: block;
+        text-transform: uppercase;
+    }
 }
 
 
 
 /* STAGE */
 .stage {
-    @include susy-grid-background;
-    @include padding-leader(2);
+    @include padding-leader(1.5);
+    @include padding-trailer(2);
+    background: $stage-bg;
+    @include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
+    @include text-shadow(rgba(0, 0, 0, 0.1) 1px 1px 0);    
 
     > div {
         @include container();
@@ -137,16 +167,16 @@ nav[role=navigation] {
         @include full();
     }
 
-    text-shadow: lighten($main-bg, 8) 0 1px;
-
     h1 {
-        color: $link-color;
+        color: $stage-title-color;
         @include adjust-font-size-to(44px, 2, $base-font-size);
-        @include trailer(0.5, 48px);
+        @include trailer(0.5, 44px);
     }
     
     h2 {
-        color: $font-color;        
+        color: $stage-subtitle-color;; 
+        @include adjust-font-size-to(22px, 1, $base-font-size);        
+        margin-bottom: 0;
     }   
 
 }
@@ -156,14 +186,17 @@ nav[role=navigation] {
 
 .content {
     @include container();
-    @include susy-grid-background;
+    @include grid-background($total-cols, $col-width, $gutter-width, $side-gutter-width);
     
     @include padding-leader(2);
-    @include padding-trailer(2);
 
     section {
         @include trailer(2);
         @extend .group;
+
+        >:last-child {
+            margin-bottom: 0;
+        }
     }
 
 }
@@ -171,7 +204,6 @@ nav[role=navigation] {
 
 /* MAIN */
 div[role="main"] {
-    @include padding-trailer(2);
     @include full();
 }
 

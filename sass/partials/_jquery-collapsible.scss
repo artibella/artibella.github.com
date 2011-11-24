@@ -1,99 +1,120 @@
+$toggle-header-size: 18px;
+
+.skill-list {
+    list-style: none;
+    margin: 0;
+}
+
 .ui-collapsible-contain {
-	@include top-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
+    @include top-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
+
 }
 
 .ui-collapsible-heading {
-	position: relative;
-	cursor: pointer;
-	font-family: $sans-font;
-		
-	@include adjust-font-size-to($base-font-size);
-	font-weight: bold;
-	margin: 0;
-	
-	@include no-select();
+    position: relative;
+    cursor: pointer;
+    margin: 1px 0 0;    
 
-	.ui-button-inner {
-		display: inline-block;
-		margin: 0 2.5em 0 0.5em;
-	}
+    @extend .sans;
+    @include adjust-font-size-to($toggle-header-size);
 
-	.ui-icon {
-		@include rotate(0);
-		@include transition-property(all);
-		@include transition-duration(0.3s);
-	}
+    @include no-select();
 
-	&.ui-collapsible-heading-expanded {		
-		.ui-icon {
-			@include rotate(-45deg);
-		}
-	}
-	
-	&:focus, &:active {
-		outline: none;
-	}
+    font-weight: 400;
+
+
+    .ui-button-inner {
+        display: inline-block;
+        margin: 0 2.5em 0 0.5em;
+    }
+
+    .ui-icon {
+        @include rotate(0);
+        @include transition-property(all);
+        @include transition-duration(0.3s);
+    }
+
+    &.ui-collapsible-heading-expanded {
+        font-weight: 700;   
+
+        .ui-icon {
+            @include rotate(-45deg);
+        }
+    }
+
+    &.ui-collapsible-heading-collapsed & {
+    }    
+    
+    &:focus, &:active {
+        outline: none;
+    }
 }
 
 
 .ui-collapsible-heading-toggle {
-	display: block;
-	@include bottom-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0.5);
-	@include padding-leader(0.5);
-	@include padding-trailer(0.5);
-	@include transition-property(all);
-	@include transition-duration(0.3s);
-	color: $font-color;
-	font-weight: normal;
+    display: block;
+    @include padding-leader(0.5, $toggle-header-size);
+    @include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0.5, $toggle-header-size);
+     
+    @include transition-property(all);
+    @include transition-duration(0.3s);
+    
+    color: $text-color;
 
-	.ui-collapsible-heading-collapsed & {
-		background: $main-bg;
-	}
 
-	&:hover,
-	.ui-collapsible-heading-expanded & {
-		background: darken($main-bg, 2.5%);
-	}	
+    .ui-collapsible-heading-collapsed & {
+        background: $main-bg;
+    }
+
+    &:hover,
+    .ui-collapsible-heading-expanded & {
+        background: darken($main-bg, 2.5%);
+        color: $text-color;
+    }
 }
 
 .ui-collapsible-content {
-	padding: 0 0.5em;
-	@include padding-leader();
-	@include trailer(1);	
+    padding: 0 0.5em;
+    @include leader();
+    @include trailer(2);
+
+    :last-child {
+        @include trailer(0);
+    }
 }
 
 @import "icon/*.png";
 
 .ui-icon {
-	height: $base-font-size;
-	width: $base-font-size;
-	position: absolute;
-	top: 50%;
-	margin-top: -8px;
+    height: $base-font-size;
+    width: $base-font-size;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
 }
 
 .ui-btn-icon-right {
-	.ui-icon {
-		right: 8px;
-	}	
+    .ui-icon {
+        right: 8px;
+    }   
 }
 
 .ui-btn-icon-left {
-	.ui-iocn {
-		left: 8px;
-	}
+    .ui-iocn {
+        left: 8px;
+    }
 }
 
 .ui-icon-plus {
-	@include icon-sprite(plus);
+    @include icon-sprite(plus);
 }
 
 header[role="banner"] {
-	.ui-collapsible-contain {
-		@include remove-shadow-border();
-	}
-	.ui-collapsible-content {
-		padding: 0;
-		@include trailer(0);	
-	}	
+    .ui-collapsible-contain {
+        @include remove-shadow-border();
+    }
+    .ui-collapsible-content {
+        padding: 0;
+        @include trailer(0);    
+    }   
 }

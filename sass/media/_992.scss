@@ -43,12 +43,14 @@
     /* CONTENT */
     .content {
         @include grid-container(false);
-        @include susy-grid-background;
+        @include grid-background($total-cols, $col-width, $gutter-width, $side-gutter-width);
 
-        @include padding-leader(2, $base-font-size);
-        @include padding-trailer(2, $base-font-size);
+
+        @include padding-leader(2);
+        @include padding-trailer(2);
 
     }
+   
     
     /* MAIN */
     div[role="main"] {
@@ -57,29 +59,57 @@
         @include alpha();
         @include columns(12);
         @include suffix(1);
+        @include padding-trailer(2);
     }
 
 
     /* COMPLIMENTARY */
     aside[role="complementary"] {
         margin-left: 0;
-        clear: none;        
+        clear: none;
+          
         @include columns(4);
         @include omega();
 
         section {
-            ul, div, article {
-                @include adjust-font-size-to(13px);
-            }
-        }   
-    }
-    
-    .social {
-        li {
-            width: 100%;
-            display: block;
+            @include trailer(1, $base-font-size);
         }
+
+        ul, div, article {
+            @include adjust-font-size-to($sidebar-font-size);
+            @include trailer(1);
+        }
+
+        ul {
+        }
+
+        li {
+            @include padding-leader(0.5, $sidebar-font-size);
+        }  
+    
+        .social {
+            @include adjust-font-size-to($base-font-size, 1, $base-font-size);
+
+
+            li {
+                width: 100%;
+                display: block;
+            }
+
+            a {
+    
+            }
+        }
+
+        #tweets li {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+
+        }        
     }
+
+
+    
     
     /* CONTENTINFO */
 

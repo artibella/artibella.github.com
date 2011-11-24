@@ -1,79 +1,83 @@
-$noise-bg: image-url('noise.png') top left;
+// Grid debugging settings
+$grid-background-baseline-height: $base-line-height;
+$show-column-grid-backgrounds: true;
+$show-baseline-grid-backgrounds: true;
+$grid-background-offset: 0em;
+$grid-background-force-fluid: true;
+$grid-background-column-color: rgba(142, 142, 142, 0.10);
+$grid-background-baseline-color: rgba(0,0,0,0.05);
+
+$show-grid-backgrounds: false;
 
 // Main Section Colors
 $main-bg: #F2F2F2 !default;
-$page-bg: #F2F2F2 !default;
-$article-border: #eeeeee !default;
+$page-bg: $main-bg !default;
 
-
-$font-color: #595959 !default;
+// Main Text Colors
+$text-color: #595959 !default;
+$text-color-light: #aaa !default;
+$heading-color: lighten($text-color, 10%) !default;
 
 // Main Link Colors
 $link-color: #F98D21 !default;
-$link-color-hover: adjust-color($link-color, $lightness: -5, $saturation: 80) !default;
-$link-color-visited: adjust-color($link-color, $lightness: -4) !default;
+$link-color-hover: adjust-color($link-color, $lightness: -5, $saturation: 70) !default;
+$link-color-visited: $link-color !default;
 $link-color-active: adjust-color($link-color-hover, $lightness: -15) !default;
 
 
 $selected-font-color: #001624;  // color for selected text
 $selected-background-color: #B7D7FF;  // bg-color for selected text
 
-$border-color: #E9E9E9;
+// Border settings
+$border-color: darken($main-bg, 7) !default;;
+$type-border: 4px solid #ddd;
 $shadow-border-color: #ffffff;
 $default-rhythm-border-style: solid;
 
-/* Header */
-$header-bg: #333 !default;
-$header-border: lighten($header-bg, 15) !default;
-$title-color: #f2f2f2 !default;
-$subtitle-color: #aaa !default;
-
-
+/* Header Banner */
+$banner-bg: $main-bg !default;
+$banner-color: $text-color !default;
+$banner-border: none !default;
+$banner-link-color: $link-color !default;
+$banner-link-color-hover: $link-color-hover !default;
+$banner-title-color: $text-color !default;
+$banner-subtitle-color: $text-color !default;
 
 
 /* Navigation */
-$nav-bg: #ccc !default;
-$nav-color: darken($nav-bg, 38) !default;
-$nav-color-hover: darken($nav-color, 25) !default;
-$nav-placeholder: desaturate(darken($nav-bg, 10), 15) !default;
-$nav-border: darken($nav-bg, 10) !default;
-$nav-border-top: lighten($nav-bg, 15) !default;
-$nav-border-bottom: darken($nav-bg, 25) !default;
-$nav-border-left: darken($nav-bg, 11) !default;
-$nav-border-right: lighten($nav-bg, 7) !default;
+$nav-bg: transparent !default;
+$nav-color: $link-color !default;
+$nav-color-hover: $link-color-hover !default;
+
+/* Stage */
+$stage-bg: lighten($main-bg, 2%) !default;
+$stage-title-color: $heading-color !default;
+$stage-subtitle-color: $text-color !default;
 
 /* Box Shadows */
 $default-box-shadow-color: darken($border-color, 10%);
 $default-box-shadow-blur: 10px;
 $default-box-shadow-spread: false;
 
-$text-color: #222 !default;
-$text-color-light: #aaa !default;
-$type-border: #ddd !default;
-
-
 
 /* Sidebar colors */
-$sidebar-bg: #f2f2f2 !default;
+$sidebar-bg: $main-bg !default;
 $sidebar-link-color: $link-color !default;
 $sidebar-link-color-hover: $link-color-hover !default;
 $sidebar-link-color-active: $link-color-active !default;
-$sidebar-color: change-color(mix($text-color, $sidebar-bg, 80), $hue: hue($sidebar-bg), $saturation: saturation($sidebar-bg)/2) !default;
-$sidebar-border: desaturate(darken($sidebar-bg, 7), 10) !default;
-$sidebar-border: darken($sidebar-bg, 7) !default;
+$sidebar-color: $text-color !default;
+$border-color: $border-color !default;
 $sidebar-link-color-subdued: lighten($sidebar-color, 20) !default;
 $sidebar-link-color-subdued-hover: $sidebar-link-color-hover !default;
 $twitter-status-link: lighten($sidebar-link-color-subdued, 15) !default;
 
-$footer-color: #fff !default;
-$footer-bg: #333 !default;
-$footer-color: lighten($footer-bg, 38) !default;
+
+/* Footer colors */
+$footer-bg: $main-bg !default;
+$footer-color: $text-color !default;
 $footer-color-hover: lighten($footer-color, 10) !default;
-$footer-border-top: lighten($footer-bg, 15) !default;
-$footer-border-bottom: darken($footer-bg, 15) !default;
-$footer-link-color: lighten($footer-bg, 38) !default;
-$footer-link-color-hover: lighten($footer-color, 25) !default;
-$page-border-bottom: darken($footer-bg, 5) !default;
+$footer-link-color: $link-color !default;
+$footer-link-color-hover: $link-color-hover !default;
 
 
 /* Core theme application */

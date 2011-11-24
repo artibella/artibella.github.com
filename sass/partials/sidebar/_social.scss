@@ -1,21 +1,25 @@
+$social-spacing: 10px;
 @import "social/*.png";
 @include all-social-sprites;
 
 
 .social {
 	list-style: none;
-	margin-left: 0;
-		
+	margin: 0;
+	
+
+	aside[role="complementary"]  & li {
+		@include padding-leader(0.5, $base-line-height);
+	}
 
 	a {
 		@include transition-property(all);
 		@include transition-duration(0.3s); 		
-		padding-left: 38px;
+		padding-left: 48px;
 		@include padding-leader(0.25, $base-line-height);
 		@include padding-trailer(0.25, $base-line-height);
-		height: $base-line-height;
 		display: block;
-		vertical-align: center;	
+		height: $base-line-height;
 
 		&:hover {
 			margin-left: 0.75em;	

@@ -1,24 +1,32 @@
 $(function() {  
 	
-	$('div[data-role="collapsible"]').collapsible({collapsed: true});
-
-    if (window.matchMedia("(max-width: 760px)").matches) {  
-        var $nav = $('nav[role="navigation"]');
-
+    var initMobileNavigation = function () {
+        var $nav = $('nav[role="navigation"]'), 
+            $navToggle = $('<div class="navtoggle"><a href="#navigation">Show Menu</div>');
+            $navToggleLink = $navToggle.find('a').first();
+        
         $nav.collapsible({collapsed: true});
-        $navToggle = $('<div class="navtoggle">Menu</div>').insertAfter($nav);
+        $navToggle.insertAfter($nav);
 
         $navToggle.click(function(event) {
-            if($nav.data('ui-collapsed') == true) {
+            if($nav.data('ui-collapsed') === true) {
+                $navToggleLink.text("Hide Menu");
                 $nav.trigger('expand');
             } else {
+                $navToggleLink.text("Show Menu");
                 $nav.trigger('collapse');                
             }
             event.preventDefault();
         
-        });
-    }    
-     
+        });    
+    
+    };   
+    
+    $('*[data-role="collapsible"]').collapsible({collapsed: true});
+
+    if (window.matchMedia("(max-width: 760px)").matches) {  
+        initMobileNavigation();
+    }   
 });
 
 
@@ -56,4 +64,4 @@ $(function() {
             }, 0);
         }, false );
     }
-})( this );
+})(this);

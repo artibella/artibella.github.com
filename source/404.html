@@ -1,0 +1,30 @@
+---
+layout: default
+footer: true
+---
+<div id="content" class="content" data-role="content-primary">
+    <div role="main">
+        <section id="404">
+            <header>
+                <h1>Oh Noez! Page not found!</h1>
+            </header>
+            <p>
+                <figure>
+                    {% img /images/404kitten.jpg Oh noez, 404! %}
+                </figure>
+            </p>
+            <p>Sorry, you reached a page that does not exist.</p>
+            <p>Maybe this kitten will cheer you up.</p>
+            <p>
+            <a href="/" title="Back to home" class="more">Back to home &rarr;</a>
+            </p>
+       </section>
+    </div>
+    <aside role="complementary">
+      {% if site.blog_index_asides.size %}
+        {% include_array blog_index_asides %}
+      {% else %}
+        {% include_array default_asides %}
+      {% endif %}
+    </aside>
+</div>

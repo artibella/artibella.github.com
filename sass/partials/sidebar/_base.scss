@@ -4,23 +4,24 @@ aside[role=complementary] {
 	a { @extend .force-wrap; }
 
 	ul {
+        margin: 0;       
 		@include trailer(1);
-		margin-left: 0;
         list-style: none;
-		@include top-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0);
+		@include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
 	}
 	
 	li {
     	list-style: none;
-		@include bottom-shadow-border(1px, 1px, $sidebar-border, $shadow-border-color, 0.5);
-		@include padding-leader(0.5);
-		margin: 0;
+		@include top-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0.5);
+        @include padding-trailer(0.5, $sidebar-font-size);
+
+		margin: 1px 0 0 0;
 		@include transition-property(all);
 		@include transition-duration(0.3s); 
 
 
 		p:last-child {
-		  margin-bottom: 0;
+            @include trailer(0);
 		}		
 
 

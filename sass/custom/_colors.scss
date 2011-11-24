@@ -1,15 +1,3 @@
-// Here you can easily change your sites's color scheme.
-// To give it a try, uncomment some of the lines below rebuild your blog, and see how it works.
-// If you need a handy color picker try http://hslpicker.com
-
-//$header-bg: #263347;
-//$subtitle-color: lighten($header-bg, 58);
-//$nav-bg: desaturate(lighten(#8fc17a, 18), 5);
-//$sidebar-bg: desaturate(#eceff5, 8);
-//$sidebar-link-color: saturate(#526f9a, 10);
-//$sidebar-link-color-hover: darken(#7ab662, 9);
-
-
 /* To use the light Solarized highlighting theme uncomment the following line */
 //$solarized: light
 
@@ -37,4 +25,23 @@
 //$pre-border: $base02;
 //$pre-color: $base1;
 
-$link-color: #80BF40;
+
+
+//brown, red, blue
+$main-bg: #f7f6f2;
+$text-color: #3a3733;
+$text-color-light: #aaa;
+$link-color: #dd5520;
+$link-color-hover: #ec5b22;
+$heading-color: #4ac3cc;
+
+$banner-bg: $main-bg;
+$banner-border: 8px solid $text-color;
+$banner-title-color: $text-color;
+
+$nav-color: $text-color;
+$footer-bg: $main-bg;
+
+$stage-bg: #ec5b22;
+$stage-title-color: $main-bg;
+$stage-subtitle-color: $main-bg;
