@@ -48,6 +48,10 @@ $banner-subtitle-color: $text-color !default;
 $nav-bg: transparent !default;
 $nav-color: $link-color !default;
 $nav-color-hover: $link-color-hover !default;
+$nav-selected-color: $link-color !default;
+$nav-selceted-color-hover: $link-color-hover !default;
+$nav-toggle-color: $heading-color !default;
+$nav-toggle-bg: $main-bg !default;
 
 /* Stage */
 $stage-bg: lighten($main-bg, 2%) !default;

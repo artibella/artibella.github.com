@@ -19,16 +19,14 @@ aside[role=complementary] {
 		@include transition-property(all);
 		@include transition-duration(0.3s); 
 
-
 		p:last-child {
             @include trailer(0);
 		}		
 
-
 		&:hover {
 			background: darken($main-bg, 2.5%);
 		}
-  	}
+    }
   	
   	a { 		
   	  	color: inherit;

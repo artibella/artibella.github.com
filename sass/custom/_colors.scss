@@ -28,20 +28,29 @@
 
 
 //brown, red, blue
-$main-bg: #f7f6f2;
-$text-color: #3a3733;
+$main-bg: #F7F6F2;
+$text-color: #4d4b47;
 $text-color-light: #aaa;
 $link-color: #dd5520;
 $link-color-hover: #ec5b22;
-$heading-color: #4ac3cc;
+$heading-color: #4AC3CC;
 
 $banner-bg: $main-bg;
-$banner-border: 8px solid $text-color;
+$banner-border: 8px solid $heading-color;
 $banner-title-color: $text-color;
 
 $nav-color: $text-color;
+$nav-toggle-color: $main-bg;
+$nav-toggle-bg: $heading-color;
+$nav-selected-color: $heading-color;
+
 $footer-bg: $main-bg;
 
-$stage-bg: #4ac3cc;
+$stage-bg: $heading-color;
 $stage-title-color: $main-bg;
 $stage-subtitle-color: $main-bg;
+
+
+
+
+

@@ -1,5 +1,12 @@
+
 <ul>
-  <li><a href="{{ root_url }}/">Home</a></li>
-  <li><a href="{{ root_url }}/about/">About</a></li>
-  <li><a href="{{ root_url }}/blog/archives">Archives</a></li>
+    {% for link in site.navigation %}
+        {% assign current = null %}
+
+        {% if page.section == link.section %}
+            {% assign current = 'selected' %}
+        {% endif %}
+
+    <li class="{{ current }}"><a href="{{ root_url }}{{ link.url }}">{{ link.text }}</a></li>
+    {% endfor %}
 </ul>

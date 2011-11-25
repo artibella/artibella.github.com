@@ -88,4 +88,20 @@ disqus_show_comment_count: false
 google_analytics_tracking_id:
 
 # Facebook Like
-facebook_like: true 
+facebook_like: true
+
+
+# ----------------------- #
+#   Main Navigation       #
+# ----------------------- #
+
+navigation:
+- text: Blog
+  section: blog
+  url: /
+- text: About
+  url: /about/
+  section: about  
+- text: Archives
+  url: /blog/archives/
+  section: archives

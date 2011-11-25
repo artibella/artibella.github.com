@@ -99,14 +99,18 @@ nav[role=navigation] {
         @include box-shadow(none);
     }
 
-        
+     
     a {
         display: block;
         text-transform: uppercase;
         @include padding-leader(0.5);
         @include padding-trailer(0.5);
-        @include link-colors($nav-color, $hover: $nav-color-hover);
-                  
+        @include link-colors($nav-color, $hover: $nav-color-hover);     
+    }
+
+    .selected a {
+        font-weight: 700;
+        color: $nav-selected-color;
     }
 
     .ui-collapsible-heading {
@@ -126,22 +130,23 @@ nav[role=navigation] {
 .navtoggle {
     position: absolute;
     right: 0;
-    top: 0;
-    width: 72px;
+    top: -8px;
+    width: 64px;
     height: 64px;
-    background: $main-bg;
+    background: $nav-toggle-bg;
     margin: 0;
     text-align: center;
     z-index: 100;
-    cursor: pointer;
 
-    @include apply-side-shadow-border(left, 1px, 1px, $border-color, $shadow-border-color, $lines: 0);
-    @include apply-side-shadow-border(right, 1px, 1px, $border-color, $shadow-border-color, $lines: 0);
-    @include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
+
     @include border-bottom-radius(12px);
+    @include box-shadow(lighten($text-color, 2%), 1px, 1px, 6px, 0);  
+
 
     a {
+        color: $nav-toggle-color;
         @include adjust-font-size-to(14px, 0.75, $base-font-size);
+        text-shadow: darken($main-bg, 5%) 0 1px;
         padding: 0 8px;
         @include padding-leader(0.5, 14px);
         @include padding-trailer(0.5, 14px);        
@@ -158,7 +163,8 @@ nav[role=navigation] {
     @include padding-trailer(2);
     background: $stage-bg;
     @include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
-    @include text-shadow(rgba(0, 0, 0, 0.1) 1px 1px 0);    
+    @include text-shadow(rgba(0, 0, 0, 0.1) 1px 1px 0);
+    @include box-shadow(rgba(0,0,0, 0.1), 0, 0, 50px, 60px, true);  
 
     > div {
         @include container();
