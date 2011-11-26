@@ -140,7 +140,7 @@ nav[role=navigation] {
 
 
     @include border-bottom-radius(12px);
-    @include box-shadow(lighten($text-color, 2%), 1px, 1px, 6px, 0);  
+    @include single-box-shadow(lighten($text-color, 2%), 1px, 1px, 6px, 0);  
 
 
     a {
@@ -164,7 +164,7 @@ nav[role=navigation] {
     background: $stage-bg;
     @include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
     @include text-shadow(rgba(0, 0, 0, 0.1) 1px 1px 0);
-    @include box-shadow(rgba(0,0,0, 0.1), 0, 0, 50px, 60px, true);  
+    @include single-box-shadow(rgba(0,0,0, 0.1), 0, 0, 50px, 60px, true);  
 
     > div {
         @include container();
