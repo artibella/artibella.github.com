@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>Artibella</title>
-  <link href="http://artibella.github.com/atom.xml" rel="self"/>
-  <link href="http://artibella.github.com/"/>
-  <updated>2011-11-26T18:46:05+01:00</updated>
-  <id>http://artibella.github.com/</id>
+  <link href="http://artibella.com/atom.xml" rel="self"/>
+  <link href="http://artibella.com/"/>
+  <updated>2012-02-07T16:36:59+01:00</updated>
+  <id>http://artibella.com/</id>
   <author>
     <name>Richard Bausek</name>
     
@@ -14,9 +14,9 @@
   
   <entry>
     <title>A new site for a fresh start</title>
-    <link href="http://artibella.github.com/blog/2011/11/15/a-new-site-for-a-fresh-start/"/>
+    <link href="http://artibella.com/blog/2011/11/15/a-new-site-for-a-fresh-start/"/>
     <updated>2011-11-15T23:20:00+01:00</updated>
-    <id>http://artibella.github.com/blog/2011/11/15/a-new-site-for-a-fresh-start</id>
+    <id>http://artibella.com/blog/2011/11/15/a-new-site-for-a-fresh-start</id>
     <content type="html">&lt;p&gt;Oh hello! Welcome to my new site. After years of building websites for other people, I finally got my act together and created my personal space on the web.&lt;/p&gt;
 
 &lt;p&gt;Starting next year I will leave the world of web agencies seeking for new opportunities and challenges in the digital universe and I am very excited about it! This site will help me to document my new experiences along the way. I will try to share my thoughts and knowledge on web and mobile development, design, UX and whatever else comes to my mind.&lt;/p&gt;
@@ -27,7 +27,7 @@
 
 &lt;p&gt;This site uses &lt;a href=&quot;http://octopress.org/&quot; title=&quot;Octopress&quot;&gt;Octopress&lt;/a&gt;, a blogging framework for hackers, which is based on &lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;, a static site generator written in Ruby. It is hosted on Github using their &lt;a href=&quot;http://pages.github.com/&quot; title=&quot;Github pages&quot;&gt;Github pages&lt;/a&gt; feature. If you are interested in the source code you can find it on &lt;a href=&quot;https://github.com/artibella/artibella.github.com/branches/source&quot; title=&quot;Octopress source code of this website&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;For the design I took a &amp;#8220;mobile first&amp;#8221; approach and created the responsive design entirly in the browser using SASS and the &lt;a href=&quot;http://compass-style.org/&quot;&gt;Compass framework&lt;/a&gt; for CSS and a modified version of the &lt;a href=&quot;http://www.stuffandnonsense.co.uk/projects/320andup/&quot; title=&quot;320 and up&quot;&gt;320 and up framework&lt;/a&gt; for the markup.&lt;/p&gt;
+&lt;p&gt;For the design I took a &amp;#8220;mobile first&amp;#8221; approach and created the responsive design entirely in the browser using SASS and the &lt;a href=&quot;http://compass-style.org/&quot;&gt;Compass framework&lt;/a&gt; for CSS and a modified version of the &lt;a href=&quot;http://www.stuffandnonsense.co.uk/projects/320andup/&quot; title=&quot;320 and up&quot;&gt;320 and up framework&lt;/a&gt; for the markup.&lt;/p&gt;
 
 &lt;p&gt;I will save further the technical details for a future blog post where I&amp;#8217;ll go through my process of building this site and share some lessons learned.&lt;/p&gt;
 </content>
