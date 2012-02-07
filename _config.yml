@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://artibella.github.com
+url: http://artibella.com
 title: Artibella
 subtitle: 
 author: Richard Bausek
@@ -85,7 +85,7 @@ disqus_short_name: artibella
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-29008773-1
 
 # Facebook Like
 facebook_like: true
