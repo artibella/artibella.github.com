@@ -4,7 +4,7 @@ footer[role="contentinfo"] {
 
 	@include padding-trailer(1, 12px);
 	color: $footer-color;
-	background: $footer-bg;
+	background: $footer-bg $noise-bg;
 	text-shadow: lighten($footer-bg, 5) 0 1px;
 	background-color: $footer-bg;
 	@include padding-leader(0.5);

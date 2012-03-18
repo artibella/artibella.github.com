@@ -10,6 +10,8 @@ $grid-background-baseline-color: rgba(0,0,0,0.05);
 $show-grid-backgrounds: false;
 
 // Main Section Colors
+$noise-bg: image-url('noise.png') top left !default;
+$main-bg: #F2F2F2 !default;
 $main-bg: #F2F2F2 !default;
 $page-bg: $main-bg !default;
 
@@ -29,13 +31,13 @@ $selected-font-color: #001624;  // color for selected text
 $selected-background-color: #B7D7FF;  // bg-color for selected text
 
 // Border settings
-$border-color: darken($main-bg, 7) !default;;
+$border-color: darken($main-bg-color, 7) !default;;
 $type-border: 4px solid #ddd;
-$shadow-border-color: #ffffff;
+$shadow-border-color: lighten($border-color, 8);
 $default-rhythm-border-style: solid;
 
 /* Header Banner */
-$banner-bg: $main-bg !default;
+$banner-bg: $main-bg-color !default;
 $banner-color: $text-color !default;
 $banner-border: none !default;
 $banner-link-color: $link-color !default;
@@ -51,10 +53,10 @@ $nav-color-hover: $link-color-hover !default;
 $nav-selected-color: $link-color !default;
 $nav-selceted-color-hover: $link-color-hover !default;
 $nav-toggle-color: $heading-color !default;
-$nav-toggle-bg: $main-bg !default;
+$nav-toggle-bg: $main-bg-color !default;
 
 /* Stage */
-$stage-bg: lighten($main-bg, 2%) !default;
+$stage-bg: lighten($main-bg-color, 2%) !default;
 $stage-title-color: $heading-color !default;
 $stage-subtitle-color: $text-color !default;
 
@@ -65,7 +67,7 @@ $default-box-shadow-spread: false;
 
 
 /* Sidebar colors */
-$sidebar-bg: $main-bg !default;
+$sidebar-bg: $main-bg-color !default;
 $sidebar-link-color: $link-color !default;
 $sidebar-link-color-hover: $link-color-hover !default;
 $sidebar-link-color-active: $link-color-active !default;
@@ -77,7 +79,7 @@ $twitter-status-link: lighten($sidebar-link-color-subdued, 15) !default;
 
 
 /* Footer colors */
-$footer-bg: $main-bg !default;
+$footer-bg: $main-bg-color !default;
 $footer-color: $text-color !default;
 $footer-color-hover: lighten($footer-color, 10) !default;
 $footer-link-color: $link-color !default;

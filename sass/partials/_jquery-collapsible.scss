@@ -68,7 +68,7 @@ $toggle-header-size: 18px;
 
     &:hover,
     .ui-collapsible-heading-expanded & {
-        background: darken($main-bg, 2.5%);
+        background: darken($main-bg-color, 2.5%) $noise-bg;
         color: $text-color;
     }
 }

@@ -44,7 +44,7 @@ body {
 
 header[role=banner] {
     @include susy-grid-background;
-    background-color: $banner-bg;
+    /* background-color: $banner-bg; */
     color: $banner-color;
     border-top: $banner-border;
     @include bottom-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
@@ -146,7 +146,7 @@ nav[role=navigation] {
     a {
         color: $nav-toggle-color;
         @include adjust-font-size-to(14px, 0.75, $base-font-size);
-        text-shadow: darken($main-bg, 5%) 0 1px;
+        text-shadow: darken($main-bg-color, 5%) 0 1px;
         padding: 0 8px;
         @include padding-leader(0.5, 14px);
         @include padding-trailer(0.5, 14px);        

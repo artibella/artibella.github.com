@@ -28,27 +28,29 @@
 
 
 //brown, red, blue
-$main-bg: #F7F6F2;
+$noise-bg: image-url('noise.png') top left !default;
+$main-bg-color: #f7f6f2;
+$main-bg: $main-bg-color $noise-bg;
 $text-color: #4d4b47;
 $text-color-light: #aaa;
 $link-color: #dd5520;
 $link-color-hover: #ec5b22;
 $heading-color: #4AC3CC;
 
-$banner-bg: $main-bg;
+$banner-bg: $main-bg-color;
 $banner-border: 8px solid $heading-color;
 $banner-title-color: $text-color;
 
 $nav-color: $text-color;
-$nav-toggle-color: $main-bg;
+$nav-toggle-color: $main-bg-color;
 $nav-toggle-bg: $heading-color;
 $nav-selected-color: $heading-color;
 
-$footer-bg: $main-bg;
+$footer-bg: $main-bg-color;
 
-$stage-bg: $heading-color;
-$stage-title-color: $main-bg;
-$stage-subtitle-color: $main-bg;
+$stage-bg: $heading-color $noise-bg;
+$stage-title-color: $main-bg-color;
+$stage-subtitle-color: $main-bg-color;
 
 
 
