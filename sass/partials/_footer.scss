@@ -2,11 +2,13 @@
 footer[role="contentinfo"] {
  	@extend .sans;
 
+	@include top-shadow-border(1px, 1px, $border-color, $shadow-border-color, 0);
+
+
 	@include padding-trailer(1, 12px);
 	color: $footer-color;
-	background: $footer-bg $noise-bg;
+	/* background: $footer-bg $noise-bg; */
 	text-shadow: lighten($footer-bg, 5) 0 1px;
-	background-color: $footer-bg;
 	@include padding-leader(0.5);
 	@include padding-trailer(0.5);	
 	

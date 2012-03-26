@@ -24,7 +24,7 @@ aside[role=complementary] {
 		}		
 
 		&:hover {
-			background: darken($main-bg-color, 2.5%);
+			background: darken($main-bg-color, 2.5%) $noise-bg;
 		}
     }
   	

@@ -11,9 +11,10 @@ $show-grid-backgrounds: false;
 
 // Main Section Colors
 $noise-bg: image-url('noise.png') top left !default;
+$main-bg-color: #f2f2f2 !default;
 $main-bg: #F2F2F2 !default;
 $main-bg: #F2F2F2 !default;
-$page-bg: $main-bg !default;
+$page-bg: $main-bg-color !default;
 
 // Main Text Colors
 $text-color: #595959 !default;
@@ -31,9 +32,9 @@ $selected-font-color: #001624;  // color for selected text
 $selected-background-color: #B7D7FF;  // bg-color for selected text
 
 // Border settings
-$border-color: darken($main-bg-color, 7) !default;;
+$border-color: darken($main-bg-color, 9) !default;;
 $type-border: 4px solid #ddd;
-$shadow-border-color: lighten($border-color, 8);
+$shadow-border-color: lighten($border-color, 10);
 $default-rhythm-border-style: solid;
 
 /* Header Banner */
